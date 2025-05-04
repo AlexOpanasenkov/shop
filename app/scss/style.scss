@@ -1,0 +1,52 @@
+@use 'reset';
+@use 'vars';
+@use 'fonts';
+@use 'global';
+
+body {
+  @extend %opensans-400;
+  font-size: 20px;
+  line-height: 27px;
+  color: vars.$color-primary;
+}
+
+.header {
+  padding: 37px 0 35px;
+  font-size: 16px;
+  color: vars.$color-accent;
+  text-transform: uppercase;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__lang {
+    display: flex;
+    &--active {
+      @extend %opensans-800;
+    }
+  }
+  &__actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style-type: none;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.logo {
+  display: inline-block;
+}
