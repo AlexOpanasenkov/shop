@@ -50,3 +50,102 @@ body {
 .logo {
   display: inline-block;
 }
+
+.footer {
+  font-size: 16px;
+  color: vars.$color-text-muted;
+  background-color: vars.$bg-primary;
+  &__menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 55px 0 60px;
+    border-bottom: 1px solid vars.$bg-accent;
+    margin-bottom: 50px;
+  }
+
+  &__menu-link {
+    border-bottom: 1px solid vars.$bg-accent;
+  }
+
+  &__elements {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 45px;
+  }
+
+  &__element-title {
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+
+  &__element-list {
+    margin-bottom: 5px;
+  }
+
+  &__form {
+    width: 250px;
+    position: relative;
+  }
+  
+  &__form-input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid vars.$bg-accent;
+    color: vars.$color-accent;
+    background-color: vars.$bg-primary;
+    padding: 1px 30px 5px 0;
+    &::placeholder {
+      color: vars.$color-text-muted;
+    }
+  }
+
+  &__form-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    @extend %button-reset;
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__bottom {
+    background-color: vars.$bg-primary;
+    padding: 7px 0 9px;
+    font-size: 11px;
+    color: vars.$color-text-muted;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copy {
+    padding-left: 75px;
+  }
+
+  &__bottom-list {
+    display: flex;
+    align-items: center;
+    gap: 0 37px;
+  }
+
+  &__bottom-item + .footer__bottom-item {
+    position: relative;
+    &::before {
+      content: '|';
+      position: absolute;
+      left: -21px;
+    }
+  }
+  
+}
+
+

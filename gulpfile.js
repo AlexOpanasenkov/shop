@@ -64,6 +64,20 @@ function styles() {
     .pipe(browserSync.stream())
 }
 
+// function styles() {
+//   return src('app/scss/style.scss')
+//     .pipe(scss({ outputStyle: 'compressed' }).on('error', scss.logError))
+//     .pipe(autoprefixer({
+//       overrideBrowserslist: ['last 10 versions'],
+//       cascade: false
+//     }))
+//     .pipe(concat('style.min.css'))
+//     .pipe(dest('app/css'))
+//     .pipe(browserSync.stream());
+// }
+
+
+
 function scripts() {
   return src([
     'node_modules/swiper/swiper-bundle.js',
