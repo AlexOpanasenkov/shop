@@ -182,5 +182,69 @@ body {
   }
 }
 
+.new-collection {
+  padding: 150px 0 90px;
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 480px;
+    padding: 75px 27px 0 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+    font-size: 45px;
+    line-height: 1.28;
+    @extend %lora-400;
+    color: vars.$color-accent;
+  }
+
+  &__text {
+    color: vars.$color-text-main;
+  }
+
+  &__text + .new-collection__text {
+    margin-top: 25px;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 10px 65px;
+    margin-top: auto;
+    font-size: 16px;
+    color: vars.$color-accent;
+    border: 1px solid vars.$color-accent;
+    align-self: flex-start;
+  }
+
+  &__img {
+    margin-top: 75px;
+  }
+
+  &__box {
+    display: flex;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__box-img {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    max-width: fit-content;
+  }
+  
+  &__caption {
+    width: 290px;
+    margin-top: auto;
+    margin-bottom: 68px;
+    color: vars.$color-text-main;
+  }
+}
 
 
