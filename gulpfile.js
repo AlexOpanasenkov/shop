@@ -55,11 +55,12 @@ function images() {
 
 function styles() {
   return src('app/scss/*.scss')
+.pipe(scss({ style: 'compressed' }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions']
     }))
     .pipe(concat('style.min.css'))
-    .pipe(scss({ style: 'compressed' }))
+    
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
