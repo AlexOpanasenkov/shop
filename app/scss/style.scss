@@ -276,7 +276,6 @@ svg {
     display: flex;
     align-items: stretch; // рвстягиваем по всей высоте
     gap: 40px;
-    border: 1px solid yellow;
   }
 
   &__img {
@@ -354,3 +353,64 @@ svg {
     text-align: center;
   }
 }
+
+.about-collection {
+  padding: 90px 0 230px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 541px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    @extend %lora-400;
+    font-size: 45px;
+    line-height: 1.3;
+    color: vars.$color-accent;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @extend %opensans-400;
+    font-size: 16px;
+    line-height: 1.3;
+    color: vars.$color-text-main;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 70px;
+  }
+
+  &__caption {
+    width: 417px;
+    margin-bottom: 70px;
+    padding: 20px 27px;
+    @extend %lora-400;
+    color: vars.$color-text-muted;
+    background-color: vars.$bg-primary;
+    margin-bottom: 90px;
+  }
+
+  &__box {
+    text-align: center;
+  }
+
+  &__img {
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 10px 246px;
+    @extend %opensans-400;
+    font-size: 16px;
+    color: vars.$color-accent;
+    border: 1px solid vars.$color-accent;
+  }
+}
+
+
