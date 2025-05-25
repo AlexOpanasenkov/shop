@@ -97,7 +97,7 @@ function watching() {
     }
   });
   watch(['app/scss/*.scss'], styles)
-  watch(['app/images/src'], images)
+  watch(['app/images/src//**/*'], images)
   watch(['app/images/sprite'], sprites)
   watch(['app/pages/*', 'app/components/*'], pages)
   watch(['app/js/main.js'], scripts)
