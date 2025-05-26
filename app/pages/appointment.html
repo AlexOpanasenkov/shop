@@ -1,0 +1,59 @@
+<!--=include head.html  -->
+<!--=include promo.html  -->
+<!--=include header.html  -->
+<main class="main">
+  <section class="appointment">
+    <div class="container">
+      <h2 class="appointment__title">BOOK AN APPOINTMENT</h2>
+      <div class="appointment__box">
+        <form class="appointment__form" action="">
+          <p class="appointment__form-title">CONTACT INFORMATHION</p>
+          <p class="appointment__form-text">Fill in your contact details</p>
+          <label aria-label="First Name">
+            <input
+              class="appointment__input"
+              type="text"
+              placeholder="First name"
+              required
+          /></label>
+          <label aria-label="Last name">
+            <input
+              class="appointment__input"
+              type="text"
+              placeholder="Last name"
+              required
+          /></label>
+          <label aria-label="Email">
+            <input
+              class="appointment__input"
+              type="email"
+              placeholder="Email"
+              required
+          /></label>
+          <label aria-label="Mobile">
+            <input
+              class="appointment__input"
+              type="text"
+              placeholder="Mobile"
+              required
+          /></label>
+          <button class="appointment__btn" type="submit">SEND</button>
+        </form>
+        <picture>
+          <source srcset="images/appointment.avif" type="image/avif" />
+          <source srcset="images/appointment.webp" type="image/webp" />
+          <img
+            class="appointment__img"
+            src="images/appointment.jpg"
+            alt="foto David Backham in block appointment"
+            width="580"
+            height="490"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html  -->
+<!--=include script.html  -->
