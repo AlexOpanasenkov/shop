@@ -27,6 +27,10 @@ picture {
   display: block;
 }
 
+svg {
+  display: block;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -43,6 +47,22 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+input {
+  border: none;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
 }
 
 @media (favors-reduced-motion: reduce) {

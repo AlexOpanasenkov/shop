@@ -3,6 +3,14 @@ body {
   height: 100%;
 }
 
+html, body {
+  min-height: 100vh;
+}
+
+.logo {
+  display: inline-block;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
