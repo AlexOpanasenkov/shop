@@ -555,6 +555,21 @@ body {
   &__item {
     position: relative;
     display: inline-block;
+    &:hover {
+    
+    opacity: 0.5;
+    }
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(9),
+    &:nth-child(10),
+    &:nth-child(11),
+    &:nth-child(12),
+    &:nth-child(13),
+    &:nth-child(14) {
+      margin-top: -130px;
+      height: fit-content;
+    }
     &:nth-child(1) {
       grid-column: span 2;
       grid-row: span 2;
@@ -565,6 +580,10 @@ body {
       grid-row: span 2;
       height: fit-content;
     }
+  }
+
+  &__item-text:hover {
+    color: vars.$color-text-main;
   }
 
   &__like {
@@ -590,6 +609,49 @@ body {
     background-color: vars.$bg-primary;
   }
 }
+
+.pagination {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  gap: 2px;
+  
+  &__list {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link-active {
+    color: vars.$color-text-muted;
+    background-color: vars.$color-text-main;
+  }
+
+  &__arrow {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow-disable {
+    display: none;
+  }
+}
+
 
 .footer {
   font-size: 16px;
