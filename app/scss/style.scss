@@ -536,6 +536,19 @@ body {
 
 .collections {
   padding-bottom: 100px;
+  &__visually-hidden,
+  &__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  }
+
   &__title {
     text-align: center;
     font-size: 45px;
@@ -547,43 +560,45 @@ body {
 
   &__inner {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "aa aa bb cc"
+                         "aa aa dd ee"
+                         "ff gg hh hh"
+                         "ii jj hh hh"
+                         "kk ll mm nn";
+    
     gap: 40px;
   }
-
   &__item {
     position: relative;
     display: inline-block;
-    &:hover {
-    
-    opacity: 0.5;
+    &:nth-child(1) { 
+      grid-area: aa;
+      height: fit-content;
     }
-    &:nth-child(6),
-    &:nth-child(7),
-    &:nth-child(9),
-    &:nth-child(10),
-    &:nth-child(11),
-    &:nth-child(12),
-    &:nth-child(13),
-    &:nth-child(14) {
+    &:nth-child(2) { grid-area: bb; }
+    &:nth-child(3) { grid-area: cc; }
+    &:nth-child(4) { grid-area: dd; }
+    &:nth-child(5) { grid-area: ee; }
+    &:nth-child(6) { 
+      grid-area: ff;
       margin-top: -130px;
       height: fit-content;
     }
-    &:nth-child(1) {
-      grid-column: span 2;
-      grid-row: span 2;
+    &:nth-child(7) { 
+      grid-area: gg;
+      margin-top: -130px;
       height: fit-content;
     }
-    &:nth-child(8) {
-      grid-column: span 2;
-      grid-row: span 2;
+    &:nth-child(8) { 
+      grid-area: hh;
       height: fit-content;
     }
-  }
-
-  &__item-text:hover {
-    color: vars.$color-text-main;
+    &:nth-child(9) { grid-area: ii; }
+    &:nth-child(10) { grid-area: jj; }
+    &:nth-child(11) { grid-area: kk; }
+    &:nth-child(12) { grid-area: ll; }
+    &:nth-child(13) { grid-area: mm; }
+    &:nth-child(14) { grid-area: nn; }
   }
 
   &__like {
@@ -607,15 +622,19 @@ body {
     @extend %lora-400;
     color: vars.$color-text-muted;
     background-color: vars.$bg-primary;
+    &:hover {
+      color: vars.$color-text-main;
+    }
   }
 }
 
 .pagination {
-  padding-top: 50px;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  @extend %opensans-400;
   gap: 2px;
   
   &__list {
@@ -631,6 +650,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: vars.$color-accent;
   }
 
   &__link-active {
@@ -651,6 +671,37 @@ body {
     display: none;
   }
 }
+
+.product {
+  padding-bottom: 156px;
+  &__inner {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 2fr 1.1fr;
+    padding-right: 40px;
+  }
+  &__images {}
+  &__content {}
+  &__title {}
+  &__price {}
+  &__content-list {}
+  &__content-term {}
+  &__content-difinition {}
+  &__buttons {}
+  &__btn-sizegiude {}
+  &__btn-favorites {}
+  &__btn-addbag {}
+}
+
+.radio-box {
+}
+.radio-style {
+}
+.check-box {
+}
+.check-style {
+}
+
 
 
 .footer {
