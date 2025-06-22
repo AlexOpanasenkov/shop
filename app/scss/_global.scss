@@ -7,6 +7,13 @@ html, body {
   min-height: 100vh;
 }
 
+body {
+  @extend %opensans-400;
+  font-size: 20px;
+  line-height: 27px;
+  color: vars.$color-primary;
+}
+
 .logo {
   display: inline-block;
 }
@@ -27,3 +34,23 @@ html, body {
   margin: 0 auto;
 }
 
+input {
+  border: 0;
+}
+
+.visually-hidden,
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+.flex-aic {
+  align-items: center;
+}

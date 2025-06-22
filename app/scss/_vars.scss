@@ -31,3 +31,9 @@ $bg-accent: #cdcdcd;
   background-color: transparent;
   cursor: pointer;
 }
+
+%bg-cover-center {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
