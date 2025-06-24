@@ -1,3 +1,5 @@
+@use '../scss/vars';
+
 html,
 body {
   height: 100%;
@@ -34,12 +36,17 @@ body {
   margin: 0 auto;
 }
 
+.container-big {
+  max-width: 1540px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
 input {
   border: 0;
 }
 
-.visually-hidden,
-.sr-only {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -50,6 +57,10 @@ input {
     white-space: nowrap;
     border: 0;
   }
+
+.d-flex {
+  display: flex;
+}  
 
 .flex-aic {
   align-items: center;

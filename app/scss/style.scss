@@ -526,7 +526,7 @@
 .collections {
   padding-bottom: 100px;
   
-  &__title {
+  &__subtitle {
     text-align: center;
     font-size: 45px;
     @extend %lora-400;
@@ -1014,9 +1014,95 @@
   100% {
     transform: translateX(-100%);
   }
-
 }
 
+.main-blog {
+  .breadcrumbs-blog {
+    padding-top: 50px;
+  }
+}
+
+.breadcrumbs-blog {
+  padding: 30px 80px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    color: vars.$color-text-main;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item + .breadcrumbs-blog__item::before {
+    position: absolute;
+    content: "/";
+    left: -10px;
+  }
+}
+
+.main {
+}
+.blog-main {
+  
+  margin-bottom: 32px;
+  
+
+  &__inner {
+    padding: 40px 0;
+    border-top: 1px solid vars.$bg-muted;
+    border-bottom: 1px solid vars.$bg-muted;
+    gap: 40px;
+    color: vars.$color-accent;
+  }
+
+  &__img {
+    max-width: max-content;
+  }
+
+  &__content {
+    flex-direction: column;
+  }
+
+  &__category {
+    margin-bottom: 40px;
+    padding: 8px 24px;
+    font-size: 14px;
+    border: 1px solid vars.$bg-muted;
+    align-self: flex-start;
+  }
+
+  &__subtitle {
+    a {
+      display: block;
+      margin-bottom: 40px;
+      font-size: 48px;
+      text-transform: uppercase;
+      @extend %lora-400;
+      line-height: 1.2;
+    }
+  }
+
+  &__text {
+    max-width: 660px;
+    font-size: 24px;
+    margin-bottom: auto; 
+    // отталкиваем в самый низ кнопку
+    opacity: 0.4;
+  }
+
+  &__link {
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 32px 64px;
+    border: 1px solid vars.$color-accent;
+    align-self: flex-start;
+  }
+}
 
 .footer {
   font-size: 16px;

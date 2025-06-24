@@ -13,6 +13,16 @@ const newer = require('gulp-newer');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
 const svgstore = require('gulp-svgstore');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+
+gulp.task('scss', function () {
+  return gulp.src('app/scss/style.scss')
+    .pipe(sass({
+      includePaths: ['app/scss'] // ← теперь можно писать @use 'vars';
+    }).on('error', sass.logError))
+    .pipe(gulp.dest('app/css'));
+});
 
 function sprites() {
   return src('app/images/sprite/*.svg')
@@ -52,18 +62,33 @@ function images() {
     .pipe(dest('app/images'))
 }
 
-
 function styles() {
-  return src('app/scss/*.scss')
-.pipe(scss({ style: 'compressed' }))
+  return src('app/scss/style.scss')
+    .pipe(scss({
+      outputStyle: 'compressed',
+      includePaths: ['app/scss'] // теперь @use 'vars'; будет работать
+    }).on('error', scss.logError))
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 versions']
+      overrideBrowserslist: ['last 10 versions'],
+      cascade: false
     }))
     .pipe(concat('style.min.css'))
-    
     .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
+
+
+// function styles() {
+//   return src('app/scss/*.scss')
+// .pipe(scss({ style: 'compressed' }))
+//     .pipe(autoprefixer({
+//       overrideBrowserslist: ['last 10 versions']
+//     }))
+//     .pipe(concat('style.min.css'))
+    
+//     .pipe(dest('app/css'))
+//     .pipe(browserSync.stream())
+// }
 
 // function styles() {
 //   return src('app/scss/style.scss')
