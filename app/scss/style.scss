@@ -66,7 +66,7 @@
   height: calc(100vh - 180px);
   background-repeat: no-repeat;
   background-size: cover;
-  border: 2px solid red;
+  // border: 2px solid red;
 
   &__inner {
     position: absolute;
@@ -78,7 +78,7 @@
     justify-content: center;
     align-items: flex-start; // выравниваем по левому краю
     text-transform: uppercase;
-    border: 2px solid blue;
+    // border: 2px solid blue;
   }
 
   &__title {
@@ -88,7 +88,7 @@
     font-size: 75px;
     line-height: 1.2;
     color: vars.$color-accent;
-    border: 2px solid yellow;
+    // border: 2px solid yellow;
   }
 
   &__link {
@@ -1045,13 +1045,9 @@
   }
 }
 
-.main {
-}
 .blog-main {
-  
   margin-bottom: 32px;
   
-
   &__inner {
     padding: 40px 0;
     border-top: 1px solid vars.$bg-muted;
@@ -1101,6 +1097,106 @@
     padding: 32px 64px;
     border: 1px solid vars.$color-accent;
     align-self: flex-start;
+  }
+}
+
+.blog {
+  padding-bottom: 50px;
+
+  &__nav {
+    gap: 35px;
+    margin-bottom: 32px;
+  }
+
+  &__nav-title {
+    margin-right: auto;
+    @extend %lora-400;
+    font-size: 32px;
+    color: vars.$color-accent;
+  }
+
+  &__search {
+    margin-top: 1px;
+  }
+
+  &__search-form {
+    width: 300px;
+    position: relative;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 2px 31px 14px 3px;
+    border-bottom: 1px solid vars.$bg-muted;
+    &::placeholder {
+      color: #000;
+      opacity: 0.4;
+    }
+  }
+
+  &__search-btn {
+    position: absolute;
+    right: 3px;
+    top: 8px;
+  }
+
+  &__nav-btns {
+    margin-left: 100px;
+    gap: 20px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 50px 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item-content {
+    padding-top: 20px;
+  }
+
+  &__item-category {
+    display: inline-block;
+    padding: 8px 24px;
+    font-size: 14px;
+    border: 1px solid vars.$bg-muted;
+    margin-bottom: 16px;
+  }
+
+  &__item-description {
+    margin-bottom: 8px;
+    @extend %lora-400;
+    font-size: 24px;
+  }
+
+  &__item-date {
+    @extend %lora-400;
+    font-size: 16px;
+  }
+}
+
+.select {
+  border: none;
+  width: 300px;
+  border-bottom: 1px solid vars.$bg-muted;
+  color: rgba($color: #000, $alpha: 0.4);
+  padding: 2px 31px 14px 3px;
+  appearance: none;
+
+  &__wrapper {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../images/category-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 19px;
+      height: 18px;
+      right: 3px;
+      top: 8px;
+    }
   }
 }
 
