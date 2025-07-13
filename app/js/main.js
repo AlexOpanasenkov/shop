@@ -5,7 +5,23 @@ const swiper = new Swiper('.accessories__slider', {
   spaceBetween: 40,
   // Navigation arrows
   navigation: {
-    nextEl: '.accessories__arrow-next',
     prevEl: '.accessories__arrow-prev',
+    nextEl: '.accessories__arrow-next',
+  },
+});
+
+const swiperReviews = new Swiper('.reviews__slider', {
+  // Optional parameters
+  loop: true,
+  slidesPerView: 12,
+  spaceBetween: 16,
+  // Navigation arrows
+  navigation: {
+    prevEl: '.reviews__arrow-prev',
+    nextEl: '.reviews__arrow-next',
+  },
+  pagination: {
+        el: ".reviews__pagination",
+        type: "fraction",
   },
 });

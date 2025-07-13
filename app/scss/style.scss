@@ -525,7 +525,7 @@
 
 .collections {
   padding-bottom: 100px;
-  
+
   &__subtitle {
     text-align: center;
     font-size: 45px;
@@ -633,7 +633,7 @@
     @extend %lora-400;
     color: vars.$color-text-muted;
     background-color: vars.$bg-primary;
-    
+
     &:hover {
       color: vars.$color-text-main;
     }
@@ -755,7 +755,7 @@
       margin-bottom: 5px;
     }
   }
-  
+
   &__content-size {
     margin-bottom: 5px;
   }
@@ -892,7 +892,7 @@
     border-bottom: 2px solid vars.$bg-accent;
     text-transform: uppercase;
   }
-  
+
   &__slider {
     max-width: 950px;
     width: 100%;
@@ -1006,7 +1006,6 @@
 }
 
 @keyframes moving {
-  
   0% {
     transform: translateX(0);
   }
@@ -1047,7 +1046,7 @@
 
 .blog-main {
   margin-bottom: 32px;
-  
+
   &__inner {
     padding: 40px 0;
     border-top: 1px solid vars.$bg-muted;
@@ -1086,7 +1085,7 @@
   &__text {
     max-width: 660px;
     font-size: 24px;
-    margin-bottom: auto; 
+    margin-bottom: auto;
     // отталкиваем в самый низ кнопку
     opacity: 0.4;
   }
@@ -1188,7 +1187,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       background-image: url(../images/category-arrow.svg);
       background-repeat: no-repeat;
       background-size: contain;
@@ -1260,11 +1259,11 @@
     display: inline-block;
     margin-right: 22px;
     @extend %opensans-300;
-    opacity: .3;
+    opacity: 0.3;
     padding-right: 20px;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -1275,7 +1274,7 @@
   }
 
   &__stats-list {
-    opacity: .3;
+    opacity: 0.3;
     gap: 16px;
   }
 
@@ -1288,11 +1287,156 @@ span {
   display: inline-block;
 }
 
+.reviews {
+
+  &__top {
+    margin-bottom: 60px;
+  }
+
+  &__top-title {
+    font-size: 64px;
+    color: vars.$color-accent;
+    @extend %lora-400;
+  }
+
+  &__top-link {
+    @extend %opensans-400;
+    font-size: 24px;
+    color: rgba($color: vars.$color-accent, $alpha: 0.4);
+    border-bottom: 1px solid vars.$color-accent;
+  }
+
+  &__item {
+    padding: 40px 50px;
+    border: 1px solid;
+    border-color: rgba($color: vars.$color-accent, $alpha: 0.4);
+  }
+
+  &__item__date {
+    margin-bottom: 16px;
+    font-size: 14px;
+    opacity: 0.4;
+    margin-bottom: 16px;
+  }
+
+  &__item__name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+
+  &__item-avatar-img {
+  }
+  
+  &__item-text {
+    margin-bottom: 24px;
+  }
+
+  &__item-box-img {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__slider-nav {
+    position: absolute;
+    min-width: 1520px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 24px;
+    cursor: pointer;
+  }
+
+  &__arrow-prev {
+    right: 158px;
+  }
+
+  &__arrow-next {
+    right: 0;
+  }
+
+  &__pagination {
+    position: absolute;
+    top: 24px;
+    right: 44px;
+    left: auto;
+    width: auto;
+    color: #eaeaea;
+
+    .swiper-pagination-current {
+    color: vars.$color-accent;
+    display: inline-block;
+    padding-right: 13px;
+    }
+
+    span + span {
+      padding-left: 13px;
+    }
+  }
+
+  
+
+  &__slider-box {
+    margin-top: 60px;
+  }
+
+  &__slider {
+    overflow: hidden;
+    width: calc(100vw - (100vw - 1500px) / 2);
+  }
+
+  &__slider-wrapper {
+  }
+
+  &__slide {
+  }
+
+  &__slider-addreview {
+    margin-top: 24px;
+    margin-bottom: 85px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 24px 216px;
+    border: 1px solid vars.$color-accent;
+  }
+}
+
+.reviews-box {
+  display: flex;
+  margin-bottom: 16px;
+  gap: 10px;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__all {
+    margin-left: 20px;
+    font-size: 16px;
+    color: rgba($color: vars.$color-accent, $alpha: 0.4);
+    border-bottom: 1px solid vars.$color-accent;
+  }
+}
+
 .footer {
   font-size: 16px;
   color: vars.$color-text-muted;
   background-color: vars.$bg-primary;
-  
+
   &__menu {
     border-bottom: 1px solid vars.$bg-accent;
     margin-bottom: 50px;

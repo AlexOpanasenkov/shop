@@ -62,6 +62,10 @@ input {
   display: flex;
 }  
 
+.flex-between {
+  justify-content: space-between;
+}
+
 .flex-aic {
   align-items: center;
 }
