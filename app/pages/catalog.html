@@ -1,0 +1,192 @@
+<!--=include head.html  -->
+<!--=include promo.html  -->
+<!--=include header.html  -->
+<main class="main">
+    <!--=include breadcrumbs.html  -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog__top">
+                <div class="catalog__view-mode">
+                    View as
+                    <ul class="view-mode">
+                        <li class="view-mode__item">
+                            <button class="view-mode__btn" type="button" aria-label="Grid view" title="Grid view"
+                                aria-pressed="true">
+                                <svg width="20" height="20" aria-hidden="true" focusable="false">
+                                    <use xlink:href="images/sprite.svg#catalog-grid"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="view-mode__item">
+                            <button class="view-mode__btn" type="button" aria-label="Grid view" title="Grid view"
+                                aria-pressed="false">
+                                <svg width="120" height="20" aria-hidden="true" focusable="false">
+                                    <use xlink:href="images/sprite.svg#catalog-line"></use>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="catalog__title visually-hidden">David Beckham Collection</h1>
+                <h2 class="catalog__subtitle">
+                    Beckham Collection
+                </h2>
+                <div class="catalog-sort">
+                    <form class="catalog-sort__form" action="/catalog" method="GET" name="sortForm" id="sortForm">
+                        <div class="catalog-sort__wrapper">
+                            <select class="catalog-sort__select" name="sort" id="">
+                                <option selected>Sort by popularity</option>
+                                <option value="price">price</option>
+                                <option value="price">price</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="catalog__content">
+                <aside class="catalog__filter">
+                    <form class="catalog__filter-form" action="/catalog" method="GET" name="catalogFilter"
+                        id="catalogFilterForm">
+                        <div class="catalog__filterbox">
+                            <span class="catalog__filterbox-title">
+                                SIZE
+                            </span>
+                            <div class="catalog__filterbox-items">
+
+                            </div>
+                        </div>
+                        <div class="catalog__filterbox">
+                            <span class="catalog__filterbox-title">
+                                COLOR
+                            </span>
+                            <div class="catalog__filterbox-items">
+
+                            </div>
+                        </div>
+                        <div class="catalog__filterbox">
+                            <span class="catalog__filterbox-title">
+                                MATERIAL
+                            </span>
+                            <div class="catalog__filterbox-items">
+
+                            </div>
+                        </div>
+                        <div class="catalog__filterbox">
+                            <span class="catalog__filterbox-title">
+                                STYLE
+                            </span>
+                            <div class="catalog__filterbox-items">
+
+                            </div>
+                        </div>
+                    </form>
+                </aside>
+                <div class="catalog__content-items">
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                        <picture>
+                            <source srcset="images/catalog-1.avif" type="image/avif">
+                            <source srcset="images/catalog-1.webp" type="image/webp">
+                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                width="270" height="400" loading="lazy">
+                        </picture>
+                        <span class="catalog__item-title">leather trainers</span>
+                        <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <!--=include pagination.html  -->
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--=include footer.html  -->
+<!--=include script.html  -->

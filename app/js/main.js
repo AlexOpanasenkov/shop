@@ -13,7 +13,7 @@ const swiper = new Swiper('.accessories__slider', {
 const swiperReviews = new Swiper('.reviews__slider', {
   // Optional parameters
   loop: true,
-  slidesPerView: 12,
+  slidesPerView: 'auto',
   spaceBetween: 16,
   // Navigation arrows
   navigation: {

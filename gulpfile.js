@@ -77,33 +77,6 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-
-// function styles() {
-//   return src('app/scss/*.scss')
-// .pipe(scss({ style: 'compressed' }))
-//     .pipe(autoprefixer({
-//       overrideBrowserslist: ['last 10 versions']
-//     }))
-//     .pipe(concat('style.min.css'))
-    
-//     .pipe(dest('app/css'))
-//     .pipe(browserSync.stream())
-// }
-
-// function styles() {
-//   return src('app/scss/style.scss')
-//     .pipe(scss({ outputStyle: 'compressed' }).on('error', scss.logError))
-//     .pipe(autoprefixer({
-//       overrideBrowserslist: ['last 10 versions'],
-//       cascade: false
-//     }))
-//     .pipe(concat('style.min.css'))
-//     .pipe(dest('app/css'))
-//     .pipe(browserSync.stream());
-// }
-
-
-
 function scripts() {
   return src([
     'node_modules/swiper/swiper-bundle.js',
@@ -122,7 +95,8 @@ function watching() {
     }
   });
   watch(['app/scss/*.scss'], styles)
-  watch(['app/images/src//**/*'], images)
+  // watch(['app/images/src//**/*'], images)
+  watch('app/images/src/**/*.{png,jpg,jpeg,webp,avif,gif,svg}', images);
   watch(['app/images/sprite'], sprites)
   watch(['app/pages/*', 'app/components/*'], pages)
   watch(['app/js/main.js'], scripts)
@@ -158,3 +132,27 @@ exports.building = building;
 
 exports.build = series(cleanDist, building);
 exports.default = parallel(styles, images, sprites, scripts, pages, watching);
+
+// function styles() {
+//   return src('app/scss/*.scss')
+// .pipe(scss({ style: 'compressed' }))
+//     .pipe(autoprefixer({
+//       overrideBrowserslist: ['last 10 versions']
+//     }))
+//     .pipe(concat('style.min.css'))
+    
+//     .pipe(dest('app/css'))
+//     .pipe(browserSync.stream())
+// }
+
+// function styles() {
+//   return src('app/scss/style.scss')
+//     .pipe(scss({ outputStyle: 'compressed' }).on('error', scss.logError))
+//     .pipe(autoprefixer({
+//       overrideBrowserslist: ['last 10 versions'],
+//       cascade: false
+//     }))
+//     .pipe(concat('style.min.css'))
+//     .pipe(dest('app/css'))
+//     .pipe(browserSync.stream());
+// }
