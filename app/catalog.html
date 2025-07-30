@@ -100,12 +100,12 @@
     </div>
     <section class="catalog">
         <div class="container">
-            <div class="catalog__top">
-                <div class="catalog__view-mode">
+            <div class="catalog__top d-flex flex-between flex-aic">
+                <div class="catalog__view-mode d-flex flex-aic">
                     View as
-                    <ul class="view-mode">
+                    <ul class="view-mode d-flex flex-aic">
                         <li class="view-mode__item">
-                            <button class="view-mode__btn" type="button" aria-label="Grid view" title="Grid view"
+                            <button class="view-mode__btn view-mode__btn-grid" type="button" aria-label="Grid view" title="Grid view"
                                 aria-pressed="true">
                                 <svg width="20" height="20" aria-hidden="true" focusable="false">
                                     <use xlink:href="images/sprite.svg#catalog-grid"></use>
@@ -113,9 +113,9 @@
                             </button>
                         </li>
                         <li class="view-mode__item">
-                            <button class="view-mode__btn" type="button" aria-label="Grid view" title="Grid view"
-                                aria-pressed="false">
-                                <svg width="120" height="20" aria-hidden="true" focusable="false">
+                            <button class="view-mode__btn view-mode__btn-line" type="button" aria-label="Line view" title="Line view"
+                                aria-pressed="false" width="20" height="20">
+                                <svg width="20" height="20" aria-hidden="true" focusable="false">
                                     <use xlink:href="images/sprite.svg#catalog-line"></use>
                                 </svg>
                             </button>
@@ -126,7 +126,7 @@
                 <h2 class="catalog__subtitle">
                     Beckham Collection
                 </h2>
-                <div class="catalog-sort">
+                <div class="catalog__sort catalog-sort">
                     <form class="catalog-sort__form" action="/catalog" method="GET" name="sortForm" id="sortForm">
                         <div class="catalog-sort__wrapper">
                             <select class="catalog-sort__select" name="sort" id="">
@@ -138,16 +138,72 @@
                     </form>
                 </div>
             </div>
-            <div class="catalog__content">
+            <div class="catalog__content d-flex">
                 <aside class="catalog__filter">
                     <form class="catalog__filter-form" action="/catalog" method="GET" name="catalogFilter"
                         id="catalogFilterForm">
                         <div class="catalog__filterbox">
                             <span class="catalog__filterbox-title">
+                                PRICE
+                            </span>
+                            <div class="catalog__filterbox-items--range">
+                                <div class="range">
+                                    <div class="range__inputs d-flex flex-aic">
+                                        <label class="range__label">
+                                            <input class="range__min" type="number" name="range" value="min" min="300" max="3000" step="100">
+                                        </label>
+                                        -
+                                        <label class="range__label">
+                                            <input class="range__max" type="number" name="range" value="max" min="300" max="3000" step="100">
+                                        </label>
+                                    </div>
+                                    <div class="range__slider"></div>
+                                    <ul class="range__list">
+                                        <li class="range__item">300</li>
+                                        <li class="range__item">1,000</li>
+                                        <li class="range__item">1,500</li>
+                                        <li class="range__item">2,000</li>
+                                        <li class="range__item">2,500</li>
+                                        <li class="range__item">3,000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__filterbox">
+                            <span class="catalog__filterbox-title">
                                 SIZE
                             </span>
                             <div class="catalog__filterbox-items">
-
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="xs">
+                                    <span class="check-style"></span>
+                                    XS
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="s">
+                                    <span class="check-style"></span>
+                                    S
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="m">
+                                    <span class="check-style"></span>
+                                    M
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="l">
+                                    <span class="check-style"></span>
+                                    L
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="xl">
+                                    <span class="check-style"></span>
+                                    XL
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="xxl">
+                                    <span class="check-style"></span>
+                                    XXL
+                                </label>
                             </div>
                         </div>
                         <div class="catalog__filterbox">
@@ -155,7 +211,16 @@
                                 COLOR
                             </span>
                             <div class="catalog__filterbox-items">
-
+                                <label class="radio-label">
+                                    <input class="radio-box" type="radio" name="color" value="white">
+                                    <span class="radio-style"></span>
+                                    blue
+                                </label>
+                                <label class="radio-label">
+                                    <input class="radio-box" type="radio" name="color" value="black">
+                                    <span class="radio-style"></span>
+                                    black
+                                </label>
                             </div>
                         </div>
                         <div class="catalog__filterbox">
@@ -163,119 +228,200 @@
                                 MATERIAL
                             </span>
                             <div class="catalog__filterbox-items">
-
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="cotton">
+                                    <span class="check-style"></span>
+                                    wool
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="cotton">
+                                    <span class="check-style"></span>
+                                    cotton
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="leather">
+                                    <span class="check-style"></span>
+                                    leather
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="jersey">
+                                    <span class="check-style"></span>
+                                    jersey
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="Linen">
+                                    <span class="check-style"></span>
+                                    Linen
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="Cashmere">
+                                    <span class="check-style"></span>
+                                    Cashmere
+                                </label>
                             </div>
                         </div>
                         <div class="catalog__filterbox">
                             <span class="catalog__filterbox-title">
                                 STYLE
                             </span>
-                            <div class="catalog__filterbox-items">
-
+                            <div class="catalog__filterbox-items catalog__filterbox-items--line">
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="ALL">
+                                    <span class="check-style"></span>
+                                    ALL
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="BOHO">
+                                    <span class="check-style"></span>
+                                    BOHO
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="ROMANTIC">
+                                    <span class="check-style"></span>
+                                    ROMANTIC
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="ELEGANT">
+                                    <span class="check-style"></span>
+                                    ELEGANT
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="VINTAGE">
+                                    <span class="check-style"></span>
+                                    VINTAGE
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="SIMPLE">
+                                    <span class="check-style"></span>
+                                    SIMPLE
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="MODERN">
+                                    <span class="check-style"></span>
+                                    MODERN
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="FORMAL">
+                                    <span class="check-style"></span>
+                                    FORMAL
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="GLAMOROUS">
+                                    <span class="check-style"></span>
+                                    GLAMOROUS
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="MODEST">
+                                    <span class="check-style"></span>
+                                    MODEST
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="CASUAL">
+                                    <span class="check-style"></span>
+                                    CASUAL
+                                </label>
+                                <label class="checkbox-label">
+                                    <input class="check-box" type="checkbox" name="size" value="BEACH">
+                                    <span class="check-style"></span>
+                                    BEACH
+                                </label>
                             </div>
                         </div>
+                        <button class="catalog__filter-clean">clean all</button>
                     </form>
                 </aside>
-                <div class="catalog__content-items">
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
-                    </div>
-                    <div class="catalog__content-item">
-                        <picture>
-                            <source srcset="images/catalog-1.avif" type="image/avif">
-                            <source srcset="images/catalog-1.webp" type="image/webp">
-                            <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
-                                width="270" height="400" loading="lazy">
-                        </picture>
-                        <span class="catalog__item-title">leather trainers</span>
-                        <span class="catalog__item-price">€ 299,00</span>
+                <div class="catalog__content-box">
+                    <div class="catalog__content-items view-mode__container view-mode__container--grid">
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
+                        <div class="catalog__content-item">
+                            <picture>
+                                <source srcset="images/catalog-1.avif" type="image/avif">
+                                <source srcset="images/catalog-1.webp" type="image/webp">
+                                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items"
+                                    width="270" height="400" loading="lazy">
+                            </picture>
+                            <span class="catalog__item-title">leather trainers</span>
+                            <span class="catalog__item-price">€ 299,00</span>
+                        </div>
                     </div>
                     <div class="pagination">
                       <a class="pagination__prev pagination__arrow pagination__arrow-disable" href="#">

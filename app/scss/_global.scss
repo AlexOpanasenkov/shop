@@ -46,6 +46,13 @@ input {
   border: 0;
 }
 
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -68,4 +75,8 @@ input {
 
 .flex-aic {
   align-items: center;
+}
+
+.fdc {
+  flex-direction: column;
 }
