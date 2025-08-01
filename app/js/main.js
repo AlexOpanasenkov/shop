@@ -2,16 +2,21 @@ const modeContainer = document.querySelector('.view-mode__container');
 const modeBtnGrid = document.querySelector('.view-mode__btn-grid');
 const modeBtnLine = document.querySelector('.view-mode__btn-line');
 
+modeBtnGrid.classList.add('active');
+
 modeBtnGrid.addEventListener('click', () => {
   modeContainer.classList.add('view-mode__container--grid');
   modeContainer.classList.remove('view-mode__container--list');
+  modeBtnGrid.classList.add('active');
+  modeBtnLine.classList.remove('active');
 });
 
 modeBtnLine.addEventListener('click', () => {
   modeContainer.classList.add('view-mode__container--list');
   modeContainer.classList.remove('view-mode__container--grid');
+  modeBtnLine.classList.add('active');
+  modeBtnGrid.classList.remove('active');
 });
-
 
 
 const swiper = new Swiper('.accessories__slider', {

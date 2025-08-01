@@ -1606,14 +1606,20 @@ span {
   
   &__container--list {
     display: block;
+
+    .view-mode__btn-line {
+      opacity: 0.3;
+    }
     .blog__item {
       display: flex;
       margin-bottom: 20px;
     }
+
     .blog__item-img {
       width: 265px;
       height: 300px;
     }
+
     .blog__item-content {
       padding-left: 20px;
       align-self: center;
@@ -1621,8 +1627,15 @@ span {
   }
 }
 
+.view-mode__btn-grid,
 .view-mode__btn-line {
   opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.view-mode__btn-grid.active,
+.view-mode__btn-line.active {
+  opacity: 1;
 }
 
 .catalog-sort {
