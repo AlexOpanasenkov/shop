@@ -1,0 +1,214 @@
+<!--=include head.html  -->
+<!--=include promo.html  -->
+<!--=include header.html  -->
+<main class="main">
+  <section class="checkout">
+    <div class="container-big">
+      <div class="checkout__top d-flex flex-between flex-aic">
+        <h1 class="checkout__title visually-hidden">checkout</h1>
+        <h2 class="checkout__subtitle">
+          Checkout
+        </h2>
+        <svg width="94" height="19" aria-hidden="true" focusable="false">
+          <use xlink:href="images/sprite.svg#checkout-decor"></use>
+        </svg>
+      </div>
+      <div class="checkout__content d-flex">
+        <div class="checkout__info">
+          <form class="checkout__info-forms" action="">
+            <div class="checkout__info-item">
+              <span class="checkout__info-title">Personal information</span>
+            
+            <div class="checkout__infobox">
+              <label class="checkout__infobox-label" for="">
+                Your name
+                <input class="checkout__infobox-input" type="text" placeholder="Enter your name">
+              </label>
+              <label class="checkout__infobox-label" for="">
+                Your Last Name*
+                <input class="checkout__infobox-input" type="text" placeholder="Enter your last name" required>
+              </label>
+              <label class="checkout__infobox-label" for="">
+                Phone*
+                <input class="checkout__infobox-input" type="text" placeholder="+38(___)___-__-__" required>
+              </label>
+              <label class="checkout__infobox-label" for="">
+                Email*
+                <input class="checkout__infobox-input" type="text" placeholder="Enter your email" required>
+              </label>
+            </div>
+            </div>
+            <div class="checkout__info-item">
+              <span class="checkout__info-title">Delivery address</span>
+              <div class="checkout__infobox">
+                <label class="checkout__infobox-label checkout__infobox-wrapp checkout__infobox-marker" for="">
+                  City*
+                  <select class="checkout__infobox-select" name="" id="" required>
+                    <option selected value="">Select city</option>
+                  </select>
+                </label>
+                <label class="checkout__infobox-label checkout__infobox-wrapp checkout__infobox-arrow" for="">
+                  Country*
+                  <select class="checkout__infobox-select" name="" id="" required>
+                    <option selected value="">Select country</option>
+                  </select>
+                </label>
+                <label class="checkout__infobox-label" for="">
+                  Postal code*
+                  <input class="checkout__infobox-input" type="text" placeholder="Enter your postal code" required>
+                </label>
+                <label class="checkout__infobox-label" for="">
+                  Street name, house*
+                  <input class="checkout__infobox-input" type="text" placeholder="Enter address" required>
+                </label>
+              </div>
+            </div>
+            <div class="checkout__info-item">
+              <span class="checkout__info-title">Delivery method</span>
+              <span class="checkout__info-deltext">Select delivery method*</span>
+              <div class="checkout__info-delbox">
+                <div class="checkout__info-radio d-flex flex-between flex-aic">
+                  <label class="radio-label">
+                    <input class="radio-box" type="radio" name="delevery" value="free" checked>
+                    <span class="radio-style"></span>
+                    <span class="radio-name">Nova Poshta </span>
+                    <span class="radio-text">Delivery will take 2-7 days</span>
+                  </label>
+                  <span class="checkout__info-delprice">Free</span>
+                </div>
+                <div class="checkout__info-radio d-flex flex-between flex-aic">
+                  <label class="radio-label">
+                    <input class="radio-box" type="radio" name="delevery" value="price">
+                    <span class="radio-style"></span>
+                    <span class="radio-name">Nova Poshta (home delivery)</span>
+                    <span class="radio-text">Delivery will take 2-7 days</span>
+                  </label>
+                  <span class="checkout__info-delprice">€20</span>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__info-item checkout__info-item--last">
+              <span class="checkout__info-title">Payment</span>
+              <div class="checkout__infobox-pay d-flex">
+                <label class="checkout__infobox-label" for="">
+                  Your card number*
+                  <input class="checkout__infobox-input" type="text" placeholder="0000 0000 0000 0000" required>
+                </label>
+                <div class="checkout__infobox-paycard d-flex">
+                  <label class="checkout__infobox-label" for="">
+                    Validity period*
+                    <input class="checkout__infobox-input" type="text" placeholder="ММ/YY" required>
+                  </label>
+                  <label class="checkout__infobox-label" for="">
+                    Code*
+                    <input class="checkout__infobox-input" type="text" placeholder="000" required>
+                  </label>
+                </div>
+                <label class="checkout__infobox-label" for="">
+                  Holder name*
+                  <input class="checkout__infobox-input" type="text" placeholder="Jane Brown" required>
+                </label>
+              </div>
+            </div>
+            <p class="checkout__info-text">By clicking the "Place an order" button, you agree to the privacy policy and
+              user agreement</p>
+            <button class="checkout__info-btn" type="submit">Place an order</button>
+          </form>
+        </div>
+        <div class="checkout__details">
+          <p class="checkout__details-title">checkout__details</p>
+          <div class="checkout__details-items">
+            <div class="checkout__details-itemsline d-flex flex-between flex-aic">
+              <span class="checkout__details-quantity">2 items in bag</span>
+              <button class="checkout__details-del">
+                <svg width="18" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="images/sprite.svg#checkout-del"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-1.avif" type="image/avif">
+                <source srcset="images/order-1.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-1.png" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">TROUSERS IN COTTON</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">M</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 249,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-2.avif" type="image/avif">
+                <source srcset="images/order-2.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-2.jpg" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">LEATHER TRAINERS</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">43</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 299,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order">
+            <span class="order__title">Your order</span>
+            <dl class="order__list">
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Subtotal:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Shipping:</dt>
+                <dd class="order__list-definition">FREE</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Total:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+            </dl>
+            <a class="order__link" href="#">Change items</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html  -->
+<!--=include script.html  -->
