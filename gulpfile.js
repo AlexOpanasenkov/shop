@@ -11,6 +11,7 @@ const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 const newer = require('gulp-newer');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const sourcemaps = require('gulp-sourcemaps');
 const include = require('gulp-include');
 const svgstore = require('gulp-svgstore');
 const gulp = require('gulp');
@@ -63,9 +64,11 @@ function images() {
 }
 
 function styles() {
+  console.log('Запуск задачи styles'); // Добавьте эту строку
   return src('app/scss/style.scss')
+  .pipe(sourcemaps.init())
     .pipe(scss({
-      outputStyle: 'compressed',
+      outputStyle: 'expanded',
       includePaths: ['app/scss'] // теперь @use 'vars'; будет работать
     }).on('error', scss.logError))
     .pipe(autoprefixer({
@@ -73,6 +76,7 @@ function styles() {
       cascade: false
     }))
     .pipe(concat('style.min.css'))
+    .pipe(sourcemaps.write('.')) // Добавьте эту строку
     .pipe(dest('app/css'))
     .pipe(browserSync.stream());
 }
@@ -95,7 +99,8 @@ function watching() {
       baseDir: 'app/'
     }
   });
-  watch(['app/scss/*.scss'], styles)
+  watch(['app/scss/**/*.scss'], styles) // Следим за всеми SCSS-файлами в подпапках
+  // watch(['app/scss/*.scss'], styles)
   // watch(['app/images/src//**/*'], images)
   watch('app/images/src/**/*.{png,jpg,jpeg,webp,avif,gif,svg}', images);
   watch(['app/images/sprite'], sprites)
@@ -134,26 +139,3 @@ exports.building = building;
 exports.build = series(cleanDist, building);
 exports.default = parallel(styles, images, sprites, scripts, pages, watching);
 
-// function styles() {
-//   return src('app/scss/*.scss')
-// .pipe(scss({ style: 'compressed' }))
-//     .pipe(autoprefixer({
-//       overrideBrowserslist: ['last 10 versions']
-//     }))
-//     .pipe(concat('style.min.css'))
-    
-//     .pipe(dest('app/css'))
-//     .pipe(browserSync.stream())
-// }
-
-// function styles() {
-//   return src('app/scss/style.scss')
-//     .pipe(scss({ outputStyle: 'compressed' }).on('error', scss.logError))
-//     .pipe(autoprefixer({
-//       overrideBrowserslist: ['last 10 versions'],
-//       cascade: false
-//     }))
-//     .pipe(concat('style.min.css'))
-//     .pipe(dest('app/css'))
-//     .pipe(browserSync.stream());
-// }

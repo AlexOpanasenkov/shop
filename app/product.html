@@ -16,72 +16,75 @@
     <p class="promo-text">SAVE 10% OFF WHEN YOU <a href="#">SIGN UP</a></p>
   </div>
 </div>
-  
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__logo">
-            <a class="logo" href="#">
-              <img class="logo__img" src="images/logo.svg" alt="logo">
-            </a>
-          </div>
-          <ul class="header__lang">
-            <li class="header__lang-item header__lang-item--active">
-              <a class="header__lang-link" href="#">EN</a>/
-            </li>
-            <li class="header__lang-item">
-              <a class="header__lang-link" href="#">UA</a>
-            </li>
-          </ul>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__item-link" href="#">CATALOG</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="#">ABOUT</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="#">BOOK AN APPOINTMENT</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="#">CONTACT</a>
-              </li>
-            </ul>
-          </nav> 
-          <div class="header__actions">
-            <ul class="header__actions-list">
-            <li class="header__actions-item">
-              <a class="header__actions-link" href="#">
-                <svg width="24" height="24">
-                  <use xlink:href="images/sprite.svg#user"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="header__actions-item">
-              <a class="header__actions-link" href="#">
-                <svg width="24" height="21">
-                  <use xlink:href="images/sprite.svg#wishlist"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="header__actions-item">
-              <a class="header__actions-link" href="#">
-                <svg width="24" height="24">
-                  <use xlink:href="images/sprite.svg#shopping-bag"></use>
-                </svg>
-              </a>
-            </li>
-            </ul>
-          </div>
-        </div>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <button class="header__btn">
+        <svg width="30" height="19">
+            <use xlink:href="images/sprite.svg#mobile-btn"></use>
+          </svg>
+      </button>
+      <div class="header__logo">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
       </div>
-    </header>
-  
- 
+
+      <nav class="menu">
+        <ul class="header__lang">
+          <li class="header__lang-item header__lang-item--active">
+            <a class="header__lang-link" href="#">EN</a>/
+          </li>
+          <li class="header__lang-item">
+            <a class="header__lang-link" href="#">UA</a>
+          </li>
+        </ul>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">CATALOG</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">ABOUT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">BOOK AN APPOINTMENT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="21">
+                <use xlink:href="images/sprite.svg#wishlist"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#shopping-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
 <main class="main">
 <div class="breadcrumbs">
   <div class="container">
@@ -326,7 +329,7 @@
 							<li class="footer__menu-item">
 								<a href="#" class="footer__menu-link">About</a>
 							</li>
-							<li class="footer__menu-item">
+							<li class="footer__menu-item footer__menu-logo">
 								<a class="logo" href="#">
 									<img class="logo__img" src="images/logo-bg.svg" alt="logo">
 								</a>
@@ -382,7 +385,7 @@
 								</button>
 							</form>
 						</div>
-						<div class="footer__element">
+						<div class="footer__element footer__element--social">
 							<span class="footer__element-title">Social</span>
 							<ul class="footer__social-list">
 								<li class="footer__social-item">
