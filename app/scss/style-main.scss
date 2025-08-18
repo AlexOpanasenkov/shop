@@ -74,19 +74,16 @@
   height: calc(100vh - 180px);
   background-repeat: no-repeat;
   background-size: cover;
-  // border: 2px solid red;
-
+  
   &__inner {
     position: absolute;
     top: 0;
     height: 100%;
-    // width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; // выравниваем по левому краю
     text-transform: uppercase;
-    // border: 2px solid blue;
   }
 
   &__title {
@@ -97,11 +94,9 @@
     font-size: 75px;
     line-height: 1.2;
     color: vars.$color-accent;
-    // border: 2px solid yellow;
   }
 
   &__link {
-    // margin-bottom: 262px;
     padding: 12px 38px;
     display: inline-block;
     color: #fff;
@@ -187,6 +182,7 @@
 
 .join-us {
   background-color: vars.$bg-primary;
+  
   &__inner {
     display: flex;
     align-items: stretch; // рвстягиваем по всей высоте
@@ -194,9 +190,8 @@
   }
 
   &__img {
-    display: block; // делаем его блочным
-    width: 779px;
-    margin-left: -100px;
+    display: block; 
+    margin-left: -103px;
   }
 
   &__img img {
