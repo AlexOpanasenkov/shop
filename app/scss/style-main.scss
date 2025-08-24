@@ -87,7 +87,7 @@
   }
 
   &__title {
-    color: #000;
+    // color: #000;
     max-width: 519px;
     margin-bottom: 33px;
     @extend %lora-400;
@@ -108,6 +108,7 @@
 
 .new-collection {
   padding: 150px 0 90px;
+
   &__inner {
     position: relative;
     display: flex;
@@ -151,8 +152,11 @@
   }
 
   &__box {
-    display: flex;
     position: relative;
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-end;  // Выравниваем содержимое по низу
+    min-height: 450px;  // Фикс: даём высоту от изображения, чтобы не схлопывался
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -160,7 +164,7 @@
   &__box-img {
     position: absolute;
     top: 0;
-    left: -80%;
+    left: -18%;  // Скорректировал на -50% для примера (подгони под дизайн в Figma, может calc(-100% + 40px))
     max-width: fit-content;
   }
 
@@ -170,13 +174,12 @@
   }
 
   &__caption {
-    position: absolute;
-    right: 45px;
-    bottom: 1px;
+    position: relative;  // чтобы не absolute, и caption был в потоке 
     max-width: 290px;
     margin-top: auto;
     margin-bottom: 68px;
     color: vars.$color-text-main;
+    align-self: flex-end;  // Если flex row, то сдвинет вправо
   }
 }
 
