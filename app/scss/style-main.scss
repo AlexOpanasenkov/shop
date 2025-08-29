@@ -268,10 +268,12 @@
 }
 
 .about-collection {
+  
   padding: 90px 0 230px;
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
   }
 
   &__content {
@@ -301,7 +303,6 @@
   &__caption {
     max-width: 417px;
     width: 100%;
-    margin-bottom: 70px;
     padding: 20px 27px;
     @extend %lora-400;
     color: vars.$color-text-muted;
@@ -334,11 +335,13 @@
     flex-direction: column;
     position: relative;
   }
+
   &__img {
     position: absolute;
     bottom: 0;
     left: 40px;
   }
+
   &__inner {
     padding: 60px 18px 38px 0;
     margin-left: auto;
@@ -1090,8 +1093,7 @@
   &__text {
     max-width: 660px;
     font-size: 24px;
-    margin-bottom: auto;
-    // отталкиваем в самый низ кнопку
+    margin-bottom: auto; // отталкиваем в самый низ кнопку
     opacity: 0.4;
   }
 
