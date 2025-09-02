@@ -132,6 +132,16 @@
   .our-advantages__list {
     column-gap: 40px;
   }
+
+  .appointment__box {
+    gap: 30px;
+  }
+
+  .appointment__img {
+    object-fit: cover;
+    object-position: right;
+    height: 100%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -351,6 +361,28 @@
     padding-bottom: 30px;
   }
 
+  .appointment {
+    padding: 20px 0 20px;
+  }
+
+  .appointment__title {
+    font-size: 35px;
+    margin-bottom: 55px;
+  }
+
+  .appointment__form-title {
+    font-size: 25px;
+    margin-bottom: 45px;
+  }
+
+  .reviews__top-title {
+    font-size: 38px;
+  }
+
+  .reviews__top-link {
+    font-size: 16px;
+  }
+
   .footer__menu-logo {
     position: absolute;
     top: 20px;
@@ -401,9 +433,9 @@
 }
 
 @media (max-width: 650px) {
-.our-advantages__inner {
-  padding: 24px 0;
-}
+  .our-advantages__inner {
+    adding: 24px 0;
+  }
 
   .our-advantages__img {
     width: 220px;
@@ -411,18 +443,31 @@
   }
 
   .our-advantages__title {
-        font-size: 20px;
-        
-    }
+    font-size: 20px;
+  }
 
-    .our-advantages__item + .our-advantages__item {
+  .our-advantages__item + .our-advantages__item {
     margin-top: 15px;
   }
 
-    .our-advantages__item {
-      font-size: 16px;
-    }
+  .our-advantages__item {
+    font-size: 16px;
+  }
 
+  .appointment__title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .appointment__form-title {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+
+  .appointment__img {
+    object-fit: cover;
+    min-height: 490px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -488,6 +533,30 @@
   .about-collection__caption {
     max-width: 100%;
     margin-bottom: 40px;
+  }
+
+  .appointment__img {
+    min-height: 440px;
+  }
+
+  .reviews__top-title {
+    font-size: 20px;
+  }
+
+  .reviews__top-link {
+    font-size: 14px;
+  }
+
+  .article__item {
+    padding-left: 10px;
+  }
+
+  .reviews__slider {
+    margin-bottom: 70px;
+  }
+
+  .reviews__slider-addreview {
+    padding: 24px 128px;
   }
 
   .footer__menu-list {
@@ -629,6 +698,32 @@
 
   .our-blog__link {
     text-align: center;
+  }
+
+  .appointment__box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .appointment__form {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .appointment__input {
+    margin-bottom: 10px;
+  }
+
+  .appointment__form-title {
+    text-align: center;
+  }
+
+  .appointment__form-text {
+    margin-bottom: 20px;
+  }
+
+  .appointment__img-picture {
+    order: -1;
   }
 
   .footer__menu-list {
