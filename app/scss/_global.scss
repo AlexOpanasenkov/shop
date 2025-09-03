@@ -3,6 +3,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -40,6 +41,8 @@ body {
   max-width: 1540px;
   padding: 0 10px;
   margin: 0 auto;
+  width: 100%; /* Позволяет сжиматься до ширины содержимого */
+  box-sizing: border-box; /* Включает padding и border в общую ширину */
 }
 
 input {

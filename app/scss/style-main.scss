@@ -1046,6 +1046,10 @@
     position: relative;
   }
 
+  &__link-active {
+    @extend %opensans-800;
+  }
+
   &__item + .breadcrumbs-blog__item::before {
     position: absolute;
     content: "/";
@@ -1054,9 +1058,12 @@
 }
 
 .blog-main {
+  border: 1px solid red;
   margin-bottom: 32px;
 
   &__inner {
+    flex-direction: row; /* По умолчанию */
+    border: 1px solid yellow;
     padding: 40px 0;
     border-top: 1px solid vars.$bg-muted;
     border-bottom: 1px solid vars.$bg-muted;
@@ -1065,7 +1072,7 @@
   }
 
   &__img {
-    max-width: max-content;
+    max-width: 100%; /* Переопределяет max-content */
   }
 
   &__content {
@@ -1081,6 +1088,7 @@
   }
 
   &__subtitle {
+    max-width: 740px;
     a {
       display: block;
       margin-bottom: 40px;
@@ -1621,6 +1629,7 @@ span {
 
   &__container--grid {
     display: grid;
+    padding-bottom: 50px;
   }
 
   &__container--list {

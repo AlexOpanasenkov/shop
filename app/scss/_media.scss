@@ -1,7 +1,35 @@
+@media (max-width: 1920px) {
+  .blog__list {
+    grid-template-columns: repeat(3, 1fr); /* 3 столбца */
+  }
+
+  .blog-main__inner {
+    flex-direction: column; /* Стек изображения и контента */
+    align-items: center;
+  }
+
+  .blog__nav {
+    flex-direction: column; /* Стек элементов навигации */
+    gap: 20px;
+  }
+
+  .blog__nav-btns {
+    margin-left: 0; /* Удалить лишний отступ */
+  }
+
+  .blog__search-form {
+    width: 100%; /* Полная ширина на меньших экранах */
+  }
+}
+
 @media (max-width: 1370px) {
   .top {
     min-height: 800px; /* Уменьшаем минимальную высоту для экранов до 1100px */
     height: 70vh; /* Адаптивная высота, зависящая от высоты viewport */
+  }
+
+  .blog-main__inner {
+    gap: 20px;
   }
 }
 
@@ -141,6 +169,10 @@
     object-fit: cover;
     object-position: right;
     height: 100%;
+  }
+
+  .blog-main__text{
+    margin-bottom: 20px;
   }
 }
 
@@ -381,6 +413,37 @@
 
   .reviews__top-link {
     font-size: 16px;
+  }
+
+  .blog__list {
+    grid-template-columns: repeat(2, 1fr); /* 2 столбца */
+    gap: 30px 10px; /* Уменьшить зазоры */
+  }
+
+  .blog-main__inner {
+    padding: 20px 0; /* Уменьшить отступы */
+    gap: 20px;
+  }
+
+  .blog-main__subtitle a {
+    font-size: 36px; /* Меньший заголовок */
+  }
+
+  .blog-main__text {
+    font-size: 18px;
+  }
+
+  .blog-main__link {
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+
+  .blog__nav-title {
+    font-size: 24px;
+  }
+
+  .blog__item-description {
+    font-size: 20px;
   }
 
   .footer__menu-logo {
@@ -724,6 +787,14 @@
 
   .appointment__img-picture {
     order: -1;
+  }
+
+  .blog__list {
+    grid-template-columns: 1fr; /* 1 столбец, полностью стек */
+  }
+
+  .pagination__list {
+    flex-wrap: wrap; /* Если пагинация переполняется */
   }
 
   .footer__menu-list {
