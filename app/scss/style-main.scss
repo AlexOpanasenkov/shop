@@ -1058,12 +1058,10 @@
 }
 
 .blog-main {
-  border: 1px solid red;
   margin-bottom: 32px;
 
   &__inner {
     flex-direction: row; /* По умолчанию */
-    border: 1px solid yellow;
     padding: 40px 0;
     border-top: 1px solid vars.$bg-muted;
     border-bottom: 1px solid vars.$bg-muted;
@@ -1283,7 +1281,7 @@
       top: 0;
       right: 0;
       width: 2px;
-      height: 29px;
+      height: 100%;
       background-color: vars.$bg-muted;
     }
   }
