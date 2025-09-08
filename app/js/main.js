@@ -1,3 +1,41 @@
+const breakpoint = window.matchMedia('(max-width: 650px)');
+let sliderMobile = null;
+
+function initSwiper() {
+  sliderMobile = new Swiper(".slider-mobile", {
+  // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    // Navigation arrows
+    navigation: {
+      prevEl: ".product__arrow-prev",
+      nextEl: ".product__arrow-next",
+    },
+  });
+}
+
+function destroySwiper() {
+  if(sliderMobile) {
+    sliderMobile.destroy(true, true);
+    sliderMobile = null;
+  } 
+}
+
+function handleBreakpointChange(e) {
+  if(e.matches) {
+    destroySwiper(); // 👉 Если хотим, чтобы слайдер отключался на десктопе
+  } else {
+    if(!sliderMobile) {
+      initSwiper();
+    }
+  }
+}
+
+handleBreakpointChange(breakpoint);
+
+breakpoint.addEventListener('change', handleBreakpointChange); 
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const headerBtn = document.querySelector('.header__btn');
@@ -39,6 +77,21 @@ const swiper = new Swiper(".accessories__slider", {
     prevEl: ".accessories__arrow-prev",
     nextEl: ".accessories__arrow-next",
   },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+    },
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
 });
 
 const swiperReviews = new Swiper(".reviews__slider", {
@@ -68,7 +121,7 @@ const swiperReviews = new Swiper(".reviews__slider", {
       spaceBetween: 16,
     },
     1024: {
-      lidesPerView: 12,
+      slidesPerView: 12,
       spaceBetween: 16,
     },
   },

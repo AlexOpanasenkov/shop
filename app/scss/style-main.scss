@@ -697,6 +697,10 @@
 .product {
   padding-bottom: 156px;
 
+  &__arrow {
+    display: none;
+  }
+  
   &__inner {
     display: grid;
     gap: 40px;
@@ -838,7 +842,7 @@
 }
 
 .radio-style {
-  position: absolute;
+  position: relative;
   margin-left: -26px;
   margin-top: 2px;
   width: 16px;
@@ -869,7 +873,7 @@
 }
 
 .check-style {
-  position: absolute;
+  position: relative;
   margin-left: -20px;
   margin-top: 3px;
   width: 15px;
