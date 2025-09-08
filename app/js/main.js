@@ -1,12 +1,10 @@
-const breakpoint = window.matchMedia('(max-width: 650px)');
+const breakpoint = window.matchMedia("(max-width: 650px)");
 let sliderMobile = null;
 
 function initSwiper() {
   sliderMobile = new Swiper(".slider-mobile", {
-  // Optional parameters
     loop: true,
     slidesPerView: 1,
-    // Navigation arrows
     navigation: {
       prevEl: ".product__arrow-prev",
       nextEl: ".product__arrow-next",
@@ -15,25 +13,26 @@ function initSwiper() {
 }
 
 function destroySwiper() {
-  if(sliderMobile) {
+  if (sliderMobile) {
     sliderMobile.destroy(true, true);
     sliderMobile = null;
-  } 
+  }
 }
 
 function handleBreakpointChange(e) {
-  if(e.matches) {
-    destroySwiper(); // 👉 Если хотим, чтобы слайдер отключался на десктопе
-  } else {
-    if(!sliderMobile) {
+  if (e.matches) {
+    // ✅ Мобильный экран → включаем слайдер
+    if (!sliderMobile) {
       initSwiper();
     }
+  } else {
+    // ❌ Десктоп → выключаем слайдер
+    destroySwiper();
   }
 }
 
 handleBreakpointChange(breakpoint);
-
-breakpoint.addEventListener('change', handleBreakpointChange); 
+breakpoint.addEventListener("change", handleBreakpointChange);
 
 
 document.addEventListener("DOMContentLoaded", () => {

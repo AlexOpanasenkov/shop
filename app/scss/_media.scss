@@ -807,6 +807,7 @@
   }
 }
 
+/* 📱 Мобилка (≤ 650px) */
 @media (max-width: 650px) {
   .our-advantages__inner {
     padding: 24px 0;
@@ -873,7 +874,7 @@
     font-size: 32px;
   }
 
-  .product__inner { 
+  .product__inner {
     display: block;
   }
 
@@ -905,25 +906,26 @@
     position: relative;
   }
 
+  /* Стрелки показываем только на мобилке */
   .product {
     padding-bottom: 50px;
+  }
 
-    &__arrow {
-      display: block;
-      position: absolute;
-      cursor: pointer;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-    }
+  .product__arrow {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
 
-    &__arrow-prev {
-      left: 7px;
-    }
+  .product__arrow-prev {
+    left: 7px;
+  }
 
-    &__arrow-next {
-      right: 7px;
-    }
+  .product__arrow-next {
+    right: 7px;
   }
 
   .product__images img {
@@ -932,12 +934,14 @@
   }
 }
 
-@media (min-width: 650px) {
+/* 💻 Десктоп (> 650px) → грид вместо слайдера */
+@media (min-width: 651px) {
   .slider-mobile .swiper-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+
   .slider-mobile .swiper-slide {
     width: auto !important;
   }
