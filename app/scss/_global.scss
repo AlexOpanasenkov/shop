@@ -15,6 +15,15 @@ body {
   font-size: 20px;
   line-height: 27px;
   color: vars.$color-primary;
+  // &.scroll-lock {
+  //   overflow: hidden;
+  // }
+}
+
+html.scroll-lock,
+body.scroll-lock {
+  overflow: hidden;
+  height: 100%;
 }
 
 .logo {

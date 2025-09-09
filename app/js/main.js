@@ -1,3 +1,61 @@
+const openBtn = document.querySelector('.open-modal');
+const modal = document.querySelector('.modal');
+const modalOverlay = document.querySelector('.modal__overlay');
+const closeBtn = document.querySelector('.close-modal');
+
+function openModal() {
+  modal.setAttribute('aria-hidden', 'false');
+  document.documentElement.classList.add('scroll-lock'); // <html>
+  document.body.classList.add('scroll-lock');
+}
+
+function closeModal() {
+  modal.setAttribute('aria-hidden', 'true');
+  document.documentElement.classList.remove('scroll-lock'); // <html>
+  document.body.classList.remove('scroll-lock');
+}
+
+modalOverlay.addEventListener('click', closeModal); // закрытие по клику вне окна
+
+openBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', (e) => {
+  if(e.key = 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+    closeModal()
+  }
+});
+
+
+const openPopupBtn = document.querySelector('.catalog-popup');
+const popup = document.querySelector('.popup');
+const popupOverlay = document.querySelector('.popup__overlay');
+const closePopupBtn = document.querySelector('.close-popup');
+
+function openPopup() {
+  popup.setAttribute('aria-hidden', 'false');
+  document.documentElement.classList.add('scroll-lock'); // <html>
+  document.body.classList.add('scroll-lock');
+}
+
+function closePopup() {
+  popup.setAttribute('aria-hidden', 'true');
+  document.documentElement.classList.remove('scroll-lock'); // <html>
+  document.body.classList.remove('scroll-lock');
+}
+
+popupOverlay.addEventListener('click', closePopup); // закрытие по клику вне окна
+
+openPopupBtn.addEventListener('click', openPopup);
+closePopupBtn.addEventListener('click', closePopup);
+
+document.addEventListener('keydown', (e) => {
+  if(e.key = 'Escape' && popup.getAttribute('aria-hidden') === 'false') {
+    closePopup()
+  }
+});
+
+
 const breakpoint = window.matchMedia("(max-width: 650px)");
 let sliderMobile = null;
 
