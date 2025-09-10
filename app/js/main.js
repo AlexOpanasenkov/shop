@@ -99,11 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector('.menu');
   const bodyLock = document.querySelector('body');
 
-  // headerBtn.addEventListener('click', ()=> {
-  //   menu.classList.toggle('menu--active');
-  //   bodyLock.classList.toggle('lock');
-
-  if (headerBtn && menu) {
+    if (headerBtn && menu) {
     headerBtn.addEventListener('click', () => {
       menu.classList.toggle('menu--active');
       body.classList.toggle('scroll-lock');
@@ -130,8 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
     modeBtnLine.classList.add("active");
     modeBtnGrid.classList.remove("active");
   });
-
-});
 
 const swiper = new Swiper(".accessories__slider", {
   // Optional parameters
