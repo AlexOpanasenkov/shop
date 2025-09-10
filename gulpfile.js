@@ -121,13 +121,13 @@ function cleanDist() {
 
 function building() {
   return src([
-    'app/*.html',
-    'app/js/main.min.js',
-    'app/css/style.min.css',
-    'app/images/*.*',
-    'app/fonts/*.woff2'
-  ], {base: 'app'})
-  .pipe(dest('dist'))
+    'app/**/*.html',        // все HTML (включая из pages, если они уже собраны в app/)
+    'app/css/**/*.css',     // все css
+    'app/js/**/*.js',       // все js
+    'app/images/**/*.*',    // все картинки + подпапки
+    'app/fonts/**/*.*'      // все шрифты
+  ], { base: 'app' })
+  .pipe(dest('dist'));
 }
 
 
