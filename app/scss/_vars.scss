@@ -1,0 +1,41 @@
+$color-accent: #161515;
+$color-primary: #808080;
+$color-text-muted: #ffffff;
+$color-text-main: #4f4f4f;
+$bg-primary: #0f2b41;
+$bg-accent: #cdcdcd;
+$bg-muted: #dcdcdc;
+
+
+%lora-400 {
+  font-family: 'Lora-Regular', serif;
+  font-weight: 400;
+}
+
+%opensans-300 {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 300;
+}
+
+%opensans-400 {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%opensans-800 {
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-weight: 800;
+}
+
+%button-reset {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+%bg-cover-center {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

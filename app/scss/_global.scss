@@ -1,0 +1,94 @@
+@use '../scss/vars';
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  @extend %opensans-400;
+  font-size: 20px;
+  line-height: 27px;
+  color: vars.$color-primary;
+  // &.scroll-lock {
+  //   overflow: hidden;
+  // }
+}
+
+html.scroll-lock,
+body.scroll-lock {
+  overflow: hidden;
+  height: 100%;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.container-big {
+  max-width: 1540px;
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 100%; /* Позволяет сжиматься до ширины содержимого */
+  box-sizing: border-box; /* Включает padding и border в общую ширину */
+}
+
+input {
+  border: 0;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+.d-flex {
+  display: flex;
+}  
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-aic {
+  align-items: center;
+}
+
+.fdc {
+  flex-direction: column;
+}

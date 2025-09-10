@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>start shop</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+<div class="promo">
+  <div class="container">
+    <p class="promo-text">SAVE 10% OFF WHEN YOU <a href="#">SIGN UP</a></p>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <button class="header__btn">
+        <svg width="30" height="19">
+          <use xlink:href="images/sprite.svg#mobile-btn"></use>
+        </svg>
+      </button>
+      <div class="header__logo">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul class="header__lang">
+          <li class="header__lang-item header__lang-item--active">
+            <a class="header__lang-link" href="#">EN</a>/
+          </li>
+          <li class="header__lang-item">
+            <a class="header__lang-link" href="#">UA</a>
+          </li>
+        </ul>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__item-link" href="catalog.html">CATALOG</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">ABOUT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="appointment.html">BOOK AN APPOINTMENT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="21">
+                <use xlink:href="images/sprite.svg#wishlist"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link open-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#shopping-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal" aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <div class="modal__content" role="dialog" aria-modal="true">
+          <div class="checkout__details-items">
+            <div class="checkout__details-itemsline d-flex flex-between flex-aic">
+              <span class="checkout__details-quantity">2 items in bag</span>
+              <button class="checkout__details-del close-modal" aria-modal="close modal window">
+                <svg width="18" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="images/sprite.svg#checkout-del"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-1.avif" type="image/avif">
+                <source srcset="images/order-1.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-1.png" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">TROUSERS IN COTTON</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">M</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 249,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-2.avif" type="image/avif">
+                <source srcset="images/order-2.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-2.jpg" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">LEATHER TRAINERS</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">43</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 299,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order">
+
+            <dl class="order__list">
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Subtotal:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Shipping:</dt>
+                <dd class="order__list-definition">FREE</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Total:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+            </dl>
+            <div class="order__links">
+              <a class="order__link" href="#">KEEP SHOPPING</a>
+              <a class="order__link-now" href="#">BUY IT NOW</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main">
+  <section class="blog-one">
+    <div class="container-big">
+      <div class="blog-one__content">
+        <h1>Timeless Elegance: Inside the BOSS x David Beckham Collection</h1>
+        <div class="blog-one__stats d-flex flex-aic">
+          <span class="blog-one__category">Menswear</span>
+          <span class="blog-one__date">1 day ago</span>
+          <ul class="blog-one__stats-list d-flex flex-aic">
+            <li class="blog-one__stats-item">
+              <a class="blog-one__stats-link d-flex flex-aic" href="#">
+                <svg width="20" height="19">
+                  <use xlink:href="images/sprite.svg#blog-like"></use>
+                </svg>
+                <span>8</span>
+              </a>
+            </li>
+            <li class="blog-one__stats-item">
+              <a class="blog-one__stats-link d-flex flex-aic" href="#">
+                <svg width="24" height="24">
+                  <use xlink:href="images/sprite.svg#blog-comment"></use>
+                </svg>
+                <span>4</span>
+              </a>
+            </li>
+            <li class="blog-one__stats-item">
+              <a class="blog-one__stats-link d-flex flex-aic" href="#">
+                <svg width="24" height="24">
+                  <use xlink:href="images/sprite.svg#blog-share"></use>
+                </svg>
+                <span>1</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <picture>
+          <source srcset="images/blog-one-main.avif" type="image/avif" />
+          <source srcset="images/blog-one-main.webp" type="image/webp" />
+          <img src="images/blog-one-main.jpg" alt="Main photo of David Beckham in the article" width="1520" height="705"
+            loading="lazy" />
+        </picture>
+        <b>
+          The BOSS x David Beckham collaboration captures the perfect balance of
+          timeless elegance and modern masculinity. If you’re looking to upgrade
+          your wardrobe with a refined, confident style, here are 7 key tips
+          inspired by this iconic collection:
+        </b>
+        <h2 class="blog-one__subtitle visually-hidden">
+          Lifehacks from BOSS x David Beckham
+        </h2>
+        <h3>Tips and Lifehacks</h3>
+        <b>1. Invest in Timeless Staples</b>
+        <p>
+          Choose essential pieces like a sharp blazer, a well-fitted trench
+          coat, and tailored trousers. These items are the foundation of a
+          lasting, elegant wardrobe.
+        </p>
+        <b>2. Select Premium Fabrics</b>
+        <p>
+          High-quality materials — like merino wool, organic cotton, cashmere,
+          and soft leather — define the feel and look of sophisticated style.
+          Comfort meets luxury in every thread.
+        </p>
+        <picture>
+          <source srcset="images/blog-one-1.avif" type="image/avif" />
+          <source srcset="images/blog-one-1.webp" type="image/webp" />
+          <img src="images/blog-one-1.png" alt="Photo of David Beckham in the lifehacks section" width="1520"
+            height="662" loading="lazy" />
+        </picture>
+        <b>3. Embrace a Neutral Color Palette</b>
+        <p>
+          Shades like navy, camel, black, grey, and crisp white dominate the
+          collection. Neutral colors offer endless combinations and a polished,
+          modern edge.
+        </p>
+        <b>4. Perfect the Fit</b>
+        <p>
+          Every piece should complement your shape naturally. Whether casual or
+          formal, the right fit transforms an outfit from good to exceptional.
+        </p>
+        <picture>
+          <source srcset="images/blog-one-2.avif" type="image/avif"/>
+          <source srcset="images/blog-one-2.webp" type="image/webp"/>
+          <img src="images/blog-one-2.png" alt="Photo of David Beckham in the lifehacks section" width="1520"
+            height="662" loading="lazy"/>
+        </picture>
+        <b>5. Balance Structure with Ease</b>
+        <p>
+          Blend formal pieces with relaxed ones: think structured jackets paired
+          with casual shirts or relaxed trousers. This balance defines
+          effortless sophistication.
+        </p>
+        <b>6. Keep Accessories Subtle</b>
+        <p>
+          Minimal, refined accessories — a simple watch, sleek shoes, or a
+          classic belt — add final touches without overwhelming the look.
+        </p>
+        <b>7. Wear Confidence Like a Suit</b>
+        <p>
+          True elegance comes from within. Confidence elevates even the simplest
+          outfit, making your presence unforgettable.
+        </p>
+        <b>The BOSS x David Beckham Collection is more than just clothing — it’s
+          a statement of refined taste, quiet strength, and modern ambition.By
+          focusing on quality, craftsmanship, and timeless design, the
+          collection proves that true style doesn't chase trends — it builds a
+          lasting impression.Each piece encourages men to feel confident,
+          comfortable, and powerful in their own skin.Whether you're dressing
+          for a boardroom, a casual meeting, or a special occasion, BOSS x David
+          Beckham gives you the tools to express your best self through fashion
+          that speaks volumes without shouting. Elegance is not about being
+          noticed — it's about being remembered.And with this collection, you’ll
+          be unforgettable.</b>
+      </div>
+    </div>
+  </section>
+</main>
+    <footer class="footer">
+      <div class="container">
+          <nav class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Catalog</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Collections</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">About</a>
+							</li>
+							<li class="footer__menu-item footer__menu-logo">
+								<a class="logo" href="#">
+									<img class="logo__img" src="images/logo-bg.svg" alt="logo">
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Book your appointment</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Contact</a>
+							</li>
+						</ul>
+          </nav>
+					<div class="footer__elements">
+						<div class="footer__element">
+							<span class="footer__element-title">Location</span>
+							<address class="footer__adress">
+								Ukraine, Kyiv, <br>
+								st. Voitenko, 67
+							</address> 
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Phones</span>
+							<ul class="footer__element-list">
+								<li class="footer__element-item">
+									<a href="tel:+380676765324" class="footer__element-link">+380 (67) 676 53 24</a>
+								</li>
+								<li class="footer__element-item">
+									<a href="tel:+380678846542" class="footer__element-link">+380 (67) 884 65 42</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Emails</span>
+							<ul class="footer__element-list">
+								<li class="footer__element-item">
+									<a href="mailto:office@boss.com" class="footer__element-link">office@boss.com</a>
+								</li>
+								<li class="footer__element-item">
+									<a href="mailto:sales@boss.com" class="footer__element-link">sales@boss.com</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Sign-up for our newsletter</span>
+							<form class="footer__form" action="">
+								<label for="email__footer" aria-label="Enter email">
+								<input class="footer__form-input" id="email__footer" type="email" placeholder="Enter your email" required>
+								</label>
+								<button class="footer__form-btn" type="submit" aria-label="Send a letter">
+									<svg width="15" height="11">
+										<use xlink:href="images/sprite.svg#envelop"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+						<div class="footer__element footer__element--social">
+							<span class="footer__element-title">Social</span>
+							<ul class="footer__social-list">
+								<li class="footer__social-item">
+									<a class="footer__social-link" href="#">
+										<svg width="26" height="26">
+											<use xlink:href="images/sprite.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="footer__social-item">
+									<a class="footer__social-link" href="#">
+										<svg width="26" height="26">
+											<use xlink:href="images/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+      </div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="footer__bottom-inner">
+						<p class="footer__copy">©Boss. All rights reserved.</p>
+						<ul class="footer__bottom-list">
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Privacy Policy</a>
+							</li>
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Refund policy</a>
+							</li>
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Terms of Service</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+    </footer>
+</div>
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
