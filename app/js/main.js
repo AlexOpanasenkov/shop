@@ -21,7 +21,7 @@ openBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', (e) => {
-  if(e.key = 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+  if(e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
     closeModal()
   }
 });
@@ -50,7 +50,7 @@ openPopupBtn.addEventListener('click', openPopup);
 closePopupBtn.addEventListener('click', closePopup);
 
 document.addEventListener('keydown', (e) => {
-  if(e.key = 'Escape' && popup.getAttribute('aria-hidden') === 'false') {
+  if(e.key === 'Escape' && popup.getAttribute('aria-hidden') === 'false') {
     closePopup()
   }
 });

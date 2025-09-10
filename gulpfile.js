@@ -109,9 +109,14 @@ function watching() {
   watch(['app/*.html']).on('change', browserSync.reload)
 }
 
+// function cleanDist() {
+//   return src('dist')
+//   .pipe(clean())
+// }
+
 function cleanDist() {
-  return src('dist')
-  .pipe(clean())
+  return src('dist', { allowEmpty: true })
+    .pipe(clean({ force: true }))
 }
 
 function building() {
