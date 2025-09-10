@@ -2234,7 +2234,7 @@ span {
   z-index: 100;
   background-color: rgba($color: vars.$color-text-main, $alpha: 0.8);
 
-  &[aria-hidden="false"] {
+  &[inert="false"] {
     display: flex;
   }
 
@@ -2303,3 +2303,11 @@ span {
   display: none;
 }
 
+
+.menu--active { 
+  display: block; 
+} 
+
+.scroll-lock { 
+  overflow: hidden; 
+}
