@@ -4,13 +4,13 @@ const modalOverlay = document.querySelector('.modal__overlay');
 const closeBtn = document.querySelector('.close-modal');
 
 function openModal() {
-  modal.setAttribute('aria-hidden', 'false');
+  modal.setAttribute('inert', 'false');
   document.documentElement.classList.add('scroll-lock'); // <html>
   document.body.classList.add('scroll-lock');
 }
 
 function closeModal() {
-  modal.setAttribute('aria-hidden', 'true');
+  modal.setAttribute('inert', 'true');
   document.documentElement.classList.remove('scroll-lock'); // <html>
   document.body.classList.remove('scroll-lock');
 }
@@ -21,7 +21,7 @@ openBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+  if(e.key === 'Escape' && modal.getAttribute('inert') === 'false') {
     closeModal()
   }
 });
@@ -33,13 +33,13 @@ const popupOverlay = document.querySelector('.popup__overlay');
 const closePopupBtn = document.querySelector('.close-popup');
 
 function openPopup() {
-  popup.setAttribute('aria-hidden', 'false');
+  popup.setAttribute('inert', 'false');
   document.documentElement.classList.add('scroll-lock'); // <html>
   document.body.classList.add('scroll-lock');
 }
 
 function closePopup() {
-  popup.setAttribute('aria-hidden', 'true');
+  popup.setAttribute('inert', 'true');
   document.documentElement.classList.remove('scroll-lock'); // <html>
   document.body.classList.remove('scroll-lock');
 } 
@@ -50,7 +50,7 @@ openPopupBtn.addEventListener('click', openPopup);
 closePopupBtn.addEventListener('click', closePopup);
 
 document.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape' && popup.getAttribute('aria-hidden') === 'false') {
+  if(e.key === 'Escape' && popup.getAttribute('inert') === 'false') {
     closePopup()
   }
 });
@@ -99,10 +99,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector('.menu');
   const bodyLock = document.querySelector('body');
 
-  headerBtn.addEventListener('click', ()=> {
-    menu.classList.toggle('menu--active');
-    bodyLock.classList.toggle('lock');
-  });
+  // headerBtn.addEventListener('click', ()=> {
+  //   menu.classList.toggle('menu--active');
+  //   bodyLock.classList.toggle('lock');
+
+  if (headerBtn && menu) {
+    headerBtn.addEventListener('click', () => {
+      menu.classList.toggle('menu--active');
+      body.classList.toggle('scroll-lock');
+    });
+  } else {
+    console.error('Header button or menu not found');
+  }
+});
 
   const modeContainer = document.querySelector(".view-mode__container");
   const modeBtnGrid = document.querySelector(".view-mode__btn-grid");
