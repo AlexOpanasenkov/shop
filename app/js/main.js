@@ -42,7 +42,7 @@ function closePopup() {
   popup.setAttribute('aria-hidden', 'true');
   document.documentElement.classList.remove('scroll-lock'); // <html>
   document.body.classList.remove('scroll-lock');
-}
+} 
 
 popupOverlay.addEventListener('click', closePopup); // закрытие по клику вне окна
 
