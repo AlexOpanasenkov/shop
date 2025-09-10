@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>start shop</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+<div class="promo">
+  <div class="container">
+    <p class="promo-text">SAVE 10% OFF WHEN YOU <a href="#">SIGN UP</a></p>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <button class="header__btn">
+        <svg width="30" height="19">
+          <use xlink:href="images/sprite.svg#mobile-btn"></use>
+        </svg>
+      </button>
+      <div class="header__logo">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul class="header__lang">
+          <li class="header__lang-item header__lang-item--active">
+            <a class="header__lang-link" href="#">EN</a>/
+          </li>
+          <li class="header__lang-item">
+            <a class="header__lang-link" href="#">UA</a>
+          </li>
+        </ul>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__item-link" href="catalog.html">CATALOG</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">ABOUT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="appointment.html">BOOK AN APPOINTMENT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="21">
+                <use xlink:href="images/sprite.svg#wishlist"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link open-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#shopping-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal" aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <div class="modal__content" role="dialog" aria-modal="true">
+          <div class="checkout__details-items">
+            <div class="checkout__details-itemsline d-flex flex-between flex-aic">
+              <span class="checkout__details-quantity">2 items in bag</span>
+              <button class="checkout__details-del close-modal" aria-modal="close modal window">
+                <svg width="18" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="images/sprite.svg#checkout-del"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-1.avif" type="image/avif">
+                <source srcset="images/order-1.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-1.png" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">TROUSERS IN COTTON</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">M</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 249,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-2.avif" type="image/avif">
+                <source srcset="images/order-2.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-2.jpg" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">LEATHER TRAINERS</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">43</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 299,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order">
+
+            <dl class="order__list">
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Subtotal:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Shipping:</dt>
+                <dd class="order__list-definition">FREE</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Total:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+            </dl>
+            <div class="order__links">
+              <a class="order__link" href="#">KEEP SHOPPING</a>
+              <a class="order__link-now" href="#">BUY IT NOW</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main">
+  <section class="top" style="
+      background-image: image-set(
+        url(images/top-bg.avif) type('image/avif'),
+        url(images/top-bg.webp) type('image/webp'),
+        url(images/top-bg.jpg)
+      );
+    ">
+    <div class="container">
+      <div class="top__inner">
+        <h1 class="top__title">Backham BOSS collection</h1>
+        <a class="top__link" href="#"> SHOP NEW ARRIVALS </a>
+      </div>
+    </div>
+  </section>
+  <section class="new-collection">
+    <div class="container new-collection__inner">
+      <div class="new-collection__content">
+        <h2 class="new-collection__title">NEW COLLECTION</h2>
+        <p class="new-collection__text">
+          A new era begins. Co-designed with David, the BECKHAM x BOSS
+          collection showcases elevated design in the form of timeless wardrobe
+          staples and subtle statement pieces.
+        </p>
+        <p class="new-collection__text">
+          The exclusive assortment features a wide range of fashion-forward
+          separates that can easily be paired to create countless outfits—think
+          T-shirts, polos, trousers, blazers, jackets, coats, accessories, and
+          more.
+        </p>
+        <p class="new-collection__text">Explore the full selection today.</p>
+        <a class="new-collection__btn" href="collections.html">View the collection</a>
+      </div>
+      <picture class="new-collection__img">
+        <source srcset="images/new-collection-1.avif" type="image/avif">
+        <source srcset="images/new-collection-1.webp" type="image/webp">
+        <img src="images/new-collection-1.jpg" alt="foto David Backham in men's blue suit from new collction"
+          width="347" height="564" loading="lazy">
+      </picture>
+      <div class="new-collection__box">
+        <picture class="new-collection__box-img">
+          <source srcset="images/new-collection-2.avif" type="image/avif">
+          <source srcset="images/new-collection-2.webp" type="image/webp">
+          <img src="images/new-collection-2.jpg"
+            alt="foto David Backham in a blue jacket and white trousers from new collction" width="404" height="450"
+            loading="lazy">
+        </picture>
+        <p class="new-collection__caption">
+        ELEVATE YOUR STYLE WITH DAVID BECKHAM
+      </p>
+      </div>
+      
+    </div>
+  </section>
+  <section class="join-us">
+    <div class="container">
+      <div class="join-us__inner">
+        <picture class="join-us__img">
+          <source srcset="images/join-img.avif" type="image/avif">
+          <source srcset="images/join-img.webp" type="image/webp">
+          <img src="images/join-img.jpg" alt="black and white photo David Backham" width="779" height="613" loading="lazy">
+        </picture>
+        <div class="join-us__box">
+          <h2 class="join-us__title">JOIN US</h2>
+          <p class="join-us__text">Sign up and get 10% discount on your first purchase!</p>
+          <form class="join-us__form" action="">
+            <label  aria-label="First Name">
+              <input class="join-us__input" type="text" placeholder="First Name" name="joinus_firstName" required>
+            </label>
+            <label for="email" aria-label="Email"></label>
+            <input class="join-us__input" id="email" type="email" placeholder="Email" name="joinus_email" required>
+            <button class="join-us__btn" type="submit" aria-label="Click the button and GET 10%">GET 10%</button>
+            <p class="join-us__form-cption">*By compleating this form you are signing up to receive our emails and can unsubscribe at any time.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-collection">
+    <div class="container">
+      <div class="about-collection__inner">
+        <div class="about-collection__content">
+          <h2 class="about-collection__title">David Beckham</h2>
+          <div>
+            <p class="about-collection__text">
+              "For me, style has always been about confidence, simplicity, and
+              authenticity—and that’s exactly what this BOSS collection captures.
+              Each piece is designed with a sense of purpose and elegance that
+              fits effortlessly into the life of a modern man. Whether I’m at an
+              event, spending time with family, or traveling, I want clothes that
+              reflect who I am without trying too hard. BOSS understands that
+              balance between refinement and ease, and I’m proud to be part of
+              something that empowers people to feel strong, comfortable, and
+              truly themselves."
+            </p>
+            <p class="about-collection__caption">
+              "This collection is all about clean lines, strong identity, and
+              understated confidence—three things that have always defined my
+              personal style."
+            </p>
+            <p class="about-collection__text about-collection__text-mob">
+              "Collaborating with BOSS feels natural to me — they share my values
+              of hard work, precision, and timeless design. What I love most is
+              how the collection combines sharp tailoring with relaxed confidence.
+              It's not just about looking good; it's about feeling empowered in
+              your own skin. Fashion should be effortless, and BOSS achieves that
+              with grace."
+            </p>
+          </div>
+        </div>
+        <div class="about-collection__box">
+          <picture>
+            <source srcset="images/about-collection-img.avif" type="image/avif">
+            <source srcset="images/about-collection-img.webp" type="image/webp">
+            <img class="about-collection__img" src="images/about-collection-img.jpg"
+              alt="black and white photo David Backham" width="578" height="554" loading="lazy">
+          </picture>
+          <a class="about-collection__link" href="#">Show more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-advantages">
+    <div class="container">
+      <div class="our-advantages__wrapper">
+        <picture>
+          <source srcset="images/our-advantages.avif" type="image/avif">
+          <source srcset="images/our-advantages.webp" type="image/webp">
+          <img class="our-advantages__img" src="images/our-advantages.jpg" alt="black and white photo David Backham"
+            width="378" height="460" loading="lazy">
+        </picture>
+        <div class="our-advantages__inner">
+          <h2 class="our-advantages__title">OUR ADVANTAGES</h2>
+          <ul class="our-advantages__list">
+            <li class="our-advantages__item">Timeless style</li>
+            <li class="our-advantages__item">Elegant and comfortable</li>
+            <li class="our-advantages__item">Premium quality</li>
+            <li class="our-advantages__item">Versatile wear</li>
+            <li class="our-advantages__item">Confidence-boosting</li>
+            <li class="our-advantages__item">Modern attitude</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-blog">
+    <div class="container">
+      <div class="our-blog__inner">
+        <div class="our-blog__content">
+          <div class="our-blog__title">OUR BLOG</div>
+          <p class="our-blog__text">
+            Our blog shares insights about style, design, and modern living. We
+            inspire confidence and creativity through curated articles. Stay
+            updated with the latest trends and expert advice from our team.
+          </p>
+          <picture>
+            <source srcset="images/our-blog-1.avif" type="image/avif">
+            <source srcset="images/our-blog-1.webp" type="image/webp">
+            <img class="our-blog__img" src="images/our-blog-1.jpg" alt="black and white photo David Backham" width="772"
+              height="395" loading="lazy">
+          </picture>
+          <h3 class="our-blog__subtitle">
+            Top Trends in Modern Design You Need to Know
+          </h3>
+          <p class="our-blog__data-blog">Monday, 20 May 2025</p>
+        </div>
+        <div class="our-blog__box">
+          <picture>
+            <source srcset="images/our-blog-2.avif" type="image/avif">
+            <source srcset="images/our-blog-2.webp" type="image/webp">
+            <img class="our-blog__img" src="images/our-blog-2.jpg" alt="black and white photo David Backham" width="300"
+              height="369" loading="lazy">
+          </picture>
+          <h3 class="our-blog__subtitle">
+            "How to Elevate Your Style with Timeless Pieces"
+          </h3>
+          <p class="our-blog__data-blog our-blog__data-blog--box">
+            Tuesday, 16 April 2025
+          </p>
+          <a class="our-blog__link" href="blog.html">Show more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+    <footer class="footer">
+      <div class="container">
+          <nav class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Catalog</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Collections</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">About</a>
+							</li>
+							<li class="footer__menu-item footer__menu-logo">
+								<a class="logo" href="#">
+									<img class="logo__img" src="images/logo-bg.svg" alt="logo">
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Book your appointment</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Contact</a>
+							</li>
+						</ul>
+          </nav>
+					<div class="footer__elements">
+						<div class="footer__element">
+							<span class="footer__element-title">Location</span>
+							<address class="footer__adress">
+								Ukraine, Kyiv, <br>
+								st. Voitenko, 67
+							</address> 
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Phones</span>
+							<ul class="footer__element-list">
+								<li class="footer__element-item">
+									<a href="tel:+380676765324" class="footer__element-link">+380 (67) 676 53 24</a>
+								</li>
+								<li class="footer__element-item">
+									<a href="tel:+380678846542" class="footer__element-link">+380 (67) 884 65 42</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Emails</span>
+							<ul class="footer__element-list">
+								<li class="footer__element-item">
+									<a href="mailto:office@boss.com" class="footer__element-link">office@boss.com</a>
+								</li>
+								<li class="footer__element-item">
+									<a href="mailto:sales@boss.com" class="footer__element-link">sales@boss.com</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Sign-up for our newsletter</span>
+							<form class="footer__form" action="">
+								<label for="email__footer" aria-label="Enter email">
+								<input class="footer__form-input" id="email__footer" type="email" placeholder="Enter your email" required>
+								</label>
+								<button class="footer__form-btn" type="submit" aria-label="Send a letter">
+									<svg width="15" height="11">
+										<use xlink:href="images/sprite.svg#envelop"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+						<div class="footer__element footer__element--social">
+							<span class="footer__element-title">Social</span>
+							<ul class="footer__social-list">
+								<li class="footer__social-item">
+									<a class="footer__social-link" href="#">
+										<svg width="26" height="26">
+											<use xlink:href="images/sprite.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="footer__social-item">
+									<a class="footer__social-link" href="#">
+										<svg width="26" height="26">
+											<use xlink:href="images/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+      </div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="footer__bottom-inner">
+						<p class="footer__copy">©Boss. All rights reserved.</p>
+						<ul class="footer__bottom-list">
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Privacy Policy</a>
+							</li>
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Refund policy</a>
+							</li>
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Terms of Service</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+    </footer>
+</div>
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

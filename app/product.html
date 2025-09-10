@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>start shop</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+<div class="promo">
+  <div class="container">
+    <p class="promo-text">SAVE 10% OFF WHEN YOU <a href="#">SIGN UP</a></p>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <button class="header__btn">
+        <svg width="30" height="19">
+          <use xlink:href="images/sprite.svg#mobile-btn"></use>
+        </svg>
+      </button>
+      <div class="header__logo">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul class="header__lang">
+          <li class="header__lang-item header__lang-item--active">
+            <a class="header__lang-link" href="#">EN</a>/
+          </li>
+          <li class="header__lang-item">
+            <a class="header__lang-link" href="#">UA</a>
+          </li>
+        </ul>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__item-link" href="catalog.html">CATALOG</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">ABOUT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="appointment.html">BOOK AN APPOINTMENT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="21">
+                <use xlink:href="images/sprite.svg#wishlist"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link open-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#shopping-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal" aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <div class="modal__content" role="dialog" aria-modal="true">
+          <div class="checkout__details-items">
+            <div class="checkout__details-itemsline d-flex flex-between flex-aic">
+              <span class="checkout__details-quantity">2 items in bag</span>
+              <button class="checkout__details-del close-modal" aria-modal="close modal window">
+                <svg width="18" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="images/sprite.svg#checkout-del"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-1.avif" type="image/avif">
+                <source srcset="images/order-1.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-1.png" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">TROUSERS IN COTTON</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">M</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 249,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-2.avif" type="image/avif">
+                <source srcset="images/order-2.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-2.jpg" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">LEATHER TRAINERS</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">43</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 299,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order">
+
+            <dl class="order__list">
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Subtotal:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Shipping:</dt>
+                <dd class="order__list-definition">FREE</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Total:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+            </dl>
+            <div class="order__links">
+              <a class="order__link" href="#">KEEP SHOPPING</a>
+              <a class="order__link-now" href="#">BUY IT NOW</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main">
+<div class="breadcrumbs">
+  <div class="container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="index.html">Home</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <span class="breadcrumbs__link">Collection</span>
+      </li>
+      <li class="breadcrumbs__item">
+        <span class="breadcrumbs__link">trousers in cotton</span>
+      </li>
+    </ul>
+  </div>
+</div>
+  <section class="product">
+    <div class="container">
+      <div class="product__inner">
+        <div class="slider-mobile">
+          <div class="product__images swiper-wrapper">
+          <picture class="swiper-slide">
+            <source srcset="images/product-1.avif" type="image/avif">
+            <source srcset="images/product-1.webp" type="image/webp">
+            <img src="images/product-1.jpg" alt="photo of white pants" width="219" height="369" loading="lazy">
+          </picture>
+          <picture class="swiper-slide">
+            <source srcset="images/product-2.avif" type="image/avif">
+            <source srcset="images/product-2.webp" type="image/webp">
+            <img src="images/product-2.jpg" alt="Photo of David Beckham in white cotton pants with a white cotton belt"
+              width="483" height="752" loading="lazy">
+          </picture>
+          <picture class="swiper-slide">
+            <source srcset="images/product-3.avif" type="image/avif">
+            <source srcset="images/product-3.webp" type="image/webp">
+            <img src="images/product-3.jpg" alt="photo of a white cotton belt for white cotton pants" width="219"
+              height="363" loading="lazy">
+          </picture>
+          </div>
+          <div class="product__arrow product__arrow-prev">
+            <svg width="10" height="18">
+                <use xlink:href="images/sprite.svg#arrow-left"></use>
+              </svg>
+          </div>
+          <div class="product__arrow product__arrow-next">
+            <svg width="10" height="18">
+                <use xlink:href="images/sprite.svg#arrow-right"></use>
+              </svg>
+          </div>
+        </div>
+        <div class="product__content">
+          <h1 class="product__title">TROUSERS IN COTTON</h1>
+          <span class="product__price">€ 249,00</span>
+          <dl class="product__content-list">
+            <dt class="product__content-term">backham collection</dt>
+            <dt class="product__content-term product__content-color">COLOR</dt>
+            <dd class="product__content-difinition product__content-radio">
+              <label class="radio-label">
+                <input class="radio-box" type="radio" name="color" value="white">
+                <span class="radio-style"></span>
+                WHITE
+              </label>
+              <label class="radio-label">
+                <input class="radio-box" type="radio" name="color" value="blue">
+                <span class="radio-style"></span>
+                BlUE
+              </label>
+            </dd>
+            <dd class="product__content-difinition">
+              Blended with stretch for comfort, these BECKHAM x BOSS men's trousers will go with almost
+              anything. Rich in soft, breathable cotton. BECKHAM x BOSS brings effortless style with
+              timeless and elevated statement pieces, inspired by David’s wardrobe.
+            </dd>
+            <dd class="product__content-difinition">
+              Slim fit<br> Button and zip closure<br> Pleat front<br> Pockets bottom front: Side slash pockets<br>
+              Pockets
+              bottom back: Welt pocket<br> Partially lined
+            </dd>
+            <dt class="product__content-term product__content-size">SIZE</dt>
+            <dd class="product__content-difinition product__content-checkbox">
+              <label class="checkbox-label">
+                <input class="check-box" type="checkbox" name="size" value="xs">
+                <span class="check-style"></span>
+                XS
+              </label>
+              <label class="checkbox-label">
+                <input class="check-box" type="checkbox" name="size" value="s">
+                <span class="check-style"></span>
+                S
+              </label>
+              <label class="checkbox-label">
+                <input class="check-box" type="checkbox" name="size" value="m">
+                <span class="check-style"></span>
+                M
+              </label>
+              <label class="checkbox-label">
+                <input class="check-box" type="checkbox" name="size" value="l">
+                <span class="check-style"></span>
+                L
+              </label>
+              <label class="checkbox-label">
+                <input class="check-box" type="checkbox" name="size" value="xl">
+                <span class="check-style"></span>
+                XL
+              </label>
+              <label class="checkbox-label">
+                <input class="check-box" type="checkbox" name="size" value="xxl">
+                <span class="check-style"></span>
+                XXL
+              </label>
+            </dd>
+          </dl>
+          <div class="product__buttons">
+            <button class="product__btn-sizegiude product__btn">
+              
+              Size giude
+            </button>
+            <button class="product__btn-favorites product__btn">
+              <svg width="24" height="21">
+                <use xlink:href="images/sprite.svg#heart"></use>
+              </svg>
+              Favorites
+            </button>
+            <button class="product__btn-addbag product__btn">
+              add to bag
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="accessories">
+    <div class="container">
+      <div class="accessories__inner">
+        <h2 class="accessories__title">make your look perfect</h2>
+        <div class="accessories__slider">
+          <div class="accessories__slider-wrapper swiper-wrapper">
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-1.avif" type="image/avif">
+                <source srcset="images/slide-1.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-1.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">leather trainers</p>
+              <span class="accessories__slide-price">€ 299,00</span>
+            </div>
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-2.avif" type="image/avif">
+                <source srcset="images/slide-2.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-2.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">slim-fit coat in cashmere</p>
+              <span class="accessories__slide-price">€ 1.700,00</span>
+            </div>
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-3.avif" type="image/avif">
+                <source srcset="images/slide-3.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-3.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">T-shirt in soft linen</p>
+              <span class="accessories__slide-price">€ 139,95</span>
+            </div>
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-1.avif" type="image/avif">
+                <source srcset="images/slide-1.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-1.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">leather trainers</p>
+              <span class="accessories__slide-price">€ 299,00</span>
+            </div>
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-2.avif" type="image/avif">
+                <source srcset="images/slide-2.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-2.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">slim-fit coat in cashmere</p>
+              <span class="accessories__slide-price">€ 1.700,00</span>
+            </div>
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-3.avif" type="image/avif">
+                <source srcset="images/slide-3.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-3.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">T-shirt in soft linen</p>
+              <span class="accessories__slide-price">€ 139,95</span>
+            </div>
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-1.avif" type="image/avif">
+                <source srcset="images/slide-1.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-1.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">leather trainers</p>
+              <span class="accessories__slide-price">€ 299,00</span>
+            </div>
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-2.avif" type="image/avif">
+                <source srcset="images/slide-2.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-2.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">slim-fit coat in cashmere</p>
+              <span class="accessories__slide-price">€ 1.700,00</span>
+            </div>
+            <div class="accessories__slide swiper-slide flex-aic">
+              <picture>
+                <source srcset="images/slide-3.avif" type="image/avif">
+                <source srcset="images/slide-3.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-3.jpg"
+                  alt="Photo of David Beckham in leather sneakers" width="270" height="400" loading="lazy">
+              </picture>
+              <p class="accessories__slide-title">T-shirt in soft linen</p>
+              <span class="accessories__slide-price">€ 139,95</span>
+            </div>
+          </div>
+          <div class="accessories__arrow accessories__arrow-prev">
+            <svg width="10" height="18">
+                <use xlink:href="images/sprite.svg#arrow-left"></use>
+              </svg>
+          </div>
+          <div class="accessories__arrow accessories__arrow-next">
+            <svg width="10" height="18">
+                <use xlink:href="images/sprite.svg#arrow-right"></use>
+              </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+    <footer class="footer">
+      <div class="container">
+          <nav class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Catalog</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Collections</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">About</a>
+							</li>
+							<li class="footer__menu-item footer__menu-logo">
+								<a class="logo" href="#">
+									<img class="logo__img" src="images/logo-bg.svg" alt="logo">
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Book your appointment</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Contact</a>
+							</li>
+						</ul>
+          </nav>
+					<div class="footer__elements">
+						<div class="footer__element">
+							<span class="footer__element-title">Location</span>
+							<address class="footer__adress">
+								Ukraine, Kyiv, <br>
+								st. Voitenko, 67
+							</address> 
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Phones</span>
+							<ul class="footer__element-list">
+								<li class="footer__element-item">
+									<a href="tel:+380676765324" class="footer__element-link">+380 (67) 676 53 24</a>
+								</li>
+								<li class="footer__element-item">
+									<a href="tel:+380678846542" class="footer__element-link">+380 (67) 884 65 42</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Emails</span>
+							<ul class="footer__element-list">
+								<li class="footer__element-item">
+									<a href="mailto:office@boss.com" class="footer__element-link">office@boss.com</a>
+								</li>
+								<li class="footer__element-item">
+									<a href="mailto:sales@boss.com" class="footer__element-link">sales@boss.com</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Sign-up for our newsletter</span>
+							<form class="footer__form" action="">
+								<label for="email__footer" aria-label="Enter email">
+								<input class="footer__form-input" id="email__footer" type="email" placeholder="Enter your email" required>
+								</label>
+								<button class="footer__form-btn" type="submit" aria-label="Send a letter">
+									<svg width="15" height="11">
+										<use xlink:href="images/sprite.svg#envelop"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+						<div class="footer__element footer__element--social">
+							<span class="footer__element-title">Social</span>
+							<ul class="footer__social-list">
+								<li class="footer__social-item">
+									<a class="footer__social-link" href="#">
+										<svg width="26" height="26">
+											<use xlink:href="images/sprite.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="footer__social-item">
+									<a class="footer__social-link" href="#">
+										<svg width="26" height="26">
+											<use xlink:href="images/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+      </div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="footer__bottom-inner">
+						<p class="footer__copy">©Boss. All rights reserved.</p>
+						<ul class="footer__bottom-list">
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Privacy Policy</a>
+							</li>
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Refund policy</a>
+							</li>
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Terms of Service</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+    </footer>
+</div>
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

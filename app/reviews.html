@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>start shop</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+<div class="promo">
+  <div class="container">
+    <p class="promo-text">SAVE 10% OFF WHEN YOU <a href="#">SIGN UP</a></p>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <button class="header__btn">
+        <svg width="30" height="19">
+          <use xlink:href="images/sprite.svg#mobile-btn"></use>
+        </svg>
+      </button>
+      <div class="header__logo">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul class="header__lang">
+          <li class="header__lang-item header__lang-item--active">
+            <a class="header__lang-link" href="#">EN</a>/
+          </li>
+          <li class="header__lang-item">
+            <a class="header__lang-link" href="#">UA</a>
+          </li>
+        </ul>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__item-link" href="catalog.html">CATALOG</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">ABOUT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="appointment.html">BOOK AN APPOINTMENT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="21">
+                <use xlink:href="images/sprite.svg#wishlist"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link open-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#shopping-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal" aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <div class="modal__content" role="dialog" aria-modal="true">
+          <div class="checkout__details-items">
+            <div class="checkout__details-itemsline d-flex flex-between flex-aic">
+              <span class="checkout__details-quantity">2 items in bag</span>
+              <button class="checkout__details-del close-modal" aria-modal="close modal window">
+                <svg width="18" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="images/sprite.svg#checkout-del"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-1.avif" type="image/avif">
+                <source srcset="images/order-1.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-1.png" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">TROUSERS IN COTTON</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">M</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 249,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-2.avif" type="image/avif">
+                <source srcset="images/order-2.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-2.jpg" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">LEATHER TRAINERS</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">43</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 299,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order">
+
+            <dl class="order__list">
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Subtotal:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Shipping:</dt>
+                <dd class="order__list-definition">FREE</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Total:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+            </dl>
+            <div class="order__links">
+              <a class="order__link" href="#">KEEP SHOPPING</a>
+              <a class="order__link-now" href="#">BUY IT NOW</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main">
+  <div class="breadcrumbs-reviews">
+    <div class="container">
+      <ul class="breadcrumbs-reviews__list">
+        <li class="breadcrumbs-reviews__item">
+          <a class="breadcrumbs-reviews__link" href="index.html">Home</a>
+        </li>
+        <li class="breadcrumbs-reviews__item">
+          <a class="breadcrumbs-reviews__link" href="index.html">Catalog</a>
+        </li>
+        <li class="breadcrumbs-reviews__item">
+          <a class="breadcrumbs-reviews__link" href="index.html">Trousers cotton</a>
+        </li>
+        <li class="breadcrumbs-reviews__item breadcrumbs-reviews__item-active">
+          <span class="breadcrumbs-reviews__link">Reviews</span>
+        </li>
+      </ul>
+    </div>
+  </div>     
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews__top d-flex flex-between flex-aic">
+        <h1 class="reviews__top-title">Customer Reviews</h1>
+        <a class="reviews__top-link" href="#">Publication rules</a>
+      </div>
+    
+
+    <div class="article">
+      <article class="article__item">
+        <span class="article__item-date">15 | August | 2025</span>
+        <div class="article-box">
+          <span class="article-box__number">5.0</span>
+          <ul class="article-box__list">
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <a class="article__item-name" href="#">
+          <picture>
+            <source srcset="images/avatar.avif" type="image/avif">
+            <source srcset="images/avatar.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/avatar.png" alt="Alt text" width="50" height="50"
+              loading="lazy">
+          </picture>
+          <span>Ben</span>
+        </a>
+        <p class="article__item-text">"The fabrics feel incredible — lightweight, luxurious, and perfect for everyday
+          sophistication. BOSS and Beckham really nailed it!"</p>
+        <div class="article__item-box-img">
+          <picture>
+            <source srcset="images/article__item-1.avif" type="image/avif">
+            <source srcset="images/article__item-1.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/article__item-1.png" alt="Alt text" width="70" height="70"
+              loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="images/article__item-2.avif" type="image/avif">
+            <source srcset="images/article__item-2.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/article__item-2.png" alt="Alt text" width="70" height="70"
+              loading="lazy">
+          </picture>
+        </div>
+      </article>
+      <article class="article__item">
+        <span class="article__item-date">12 | August | 2025</span>
+        <div class="article-box">
+          <span class="article-box__number">5.0</span>
+          <ul class="article-box__list">
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <a class="article__item-name" href="#">
+          <picture>
+            <source srcset="images/avatar.avif" type="image/avif">
+            <source srcset="images/avatar.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/avatar.png" alt="Alt text" width="50" height="50"
+              loading="lazy">
+          </picture>
+          <span>Tom</span>
+        </a>
+        <p class="article__item-text">"I love how the soft cotton and premium wool make each piece so comfortable yet
+          sharp. True craftsmanship in every detail."</p>
+        <div class="article__item-box-img">
+          <picture>
+            <source srcset="images/article__item-3.avif" type="image/avif">
+            <source srcset="images/article__item-3.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/article__item-3.png" alt="Alt text" width="70" height="70"
+              loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="images/article__item-4.avif" type="image/avif">
+            <source srcset="images/article__item-4.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/article__item-4.png" alt="Alt text" width="70" height="70"
+              loading="lazy">
+          </picture>
+        </div>
+      </article>
+      <article class="article__item">
+        <span class="article__item-date">10 | August | 2025</span>
+        <div class="article-box">
+          <span class="article-box__number">5.0</span>
+          <ul class="article-box__list">
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <a class="article__item-name" href="#">
+          <picture>
+            <source srcset="images/avatar.avif" type="image/avif">
+            <source srcset="images/avatar.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/avatar.png" alt="Alt text" width="50" height="50"
+              loading="lazy">
+          </picture>
+          <span>Jonny</span>
+        </a>
+        <p class="article__item-text">"The quality of the materials is outstanding — you can feel the elegance in every
+          stitch. This collection brings timeless style to a new level."</p>
+        <div class="article__item-box-img">
+          <picture>
+            <source srcset="images/article__item-5.avif" type="image/avif">
+            <source srcset="images/article__item-5.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/article__item-5.png" alt="Photo from collection"
+              width="70" height="70" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="images/article__item-6.avif" type="image/avif">
+            <source srcset="images/article__item-6.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/article__item-6.png" alt="Photo from collection"
+              width="70" height="70" loading="lazy">
+          </picture>
+        </div>
+      </article>
+      <article class="article__item">
+        <span class="article__item-date">29 | july | 2025</span>
+        <div class="article-box">
+          <span class="article-box__number">4.0</span>
+          <ul class="article-box__list">
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star-active"></use>
+              </svg>
+            </li>
+            <li class="article-box__item">
+              <svg width="22" height="20">
+                <use xlink:href="images/sprite.svg#star"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <a class="article__item-name" href="#">
+          <picture>
+            <source srcset="images/avatar.avif" type="image/avif">
+            <source srcset="images/avatar.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/avatar.png" alt="Alt text" width="50" height="50"
+              loading="lazy">
+          </picture>
+          <span>Eric</span>
+        </a>
+        <p class="article__item-text">"Wearing the BOSS x Beckham pieces feels effortless and powerful at the same time.
+          The fine fabrics and perfect tailoring speak for themselves."</p>
+        <div class="article__item-box-img">
+          <picture>
+            <source srcset="images/article__item-3.avif" type="image/avif">
+            <source srcset="images/article__item-3.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/article__item-3.png" alt="Photo from collection"
+              width="70" height="70" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="images/article__item-4.avif" type="image/avif">
+            <source srcset="images/article__item-4.webp" type="image/webp">
+            <img class="article__item-avatar-img" src="images/article__item-4.png" alt="Photo from collection"
+              width="70" height="70" loading="lazy">
+          </picture>
+        </div>
+      </article>
+    </div>
+    <div class="pagination">
+      <a class="pagination__prev pagination__arrow pagination__arrow-disable" href="#">
+        <svg width="12" height="5">
+          <use xlink:href="images/sprite.svg#pagination-prev"></use>
+        </svg>
+      </a>
+      <ul class="pagination__list"> 
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link-active">1</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">2</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">3</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">4</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">5</a>
+        </li>
+      </ul>
+      <a class="pagination__next pagination__arrow" href="#">
+        <svg width="12" height="5">
+          <use xlink:href="images/sprite.svg#pagination-next"></use>
+        </svg>
+      </a>
+    </div>
+    </div>
+    <div class="reviews__slider-box">
+      <div class="reviews__slider">
+        <div class="reviews__slider-wrapper swiper-wrapper">
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-1.avif" type="image/avif">
+              <source srcset="images/slide-img-1.webp" type="image/webp">
+              <img src="images/slide-img-1.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-2.avif" type="image/avif">
+              <source srcset="images/slide-img-2.webp" type="image/webp">
+              <img src="images/slide-img-2.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-3.avif" type="image/avif">
+              <source srcset="images/slide-img-3.webp" type="image/webp">
+              <img src="images/slide-img-3.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-4.avif" type="image/avif">
+              <source srcset="images/slide-img-4.webp" type="image/webp">
+              <img src="images/slide-img-4.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-5.avif" type="image/avif">
+              <source srcset="images/slide-img-5.webp" type="image/webp">
+              <img src="images/slide-img-5.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-6.avif" type="image/avif">
+              <source srcset="images/slide-img-6.webp" type="image/webp">
+              <img src="images/slide-img-6.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-7.avif" type="image/avif">
+              <source srcset="images/slide-img-7.webp" type="image/webp">
+              <img src="images/slide-img-7.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-8.avif" type="image/avif">
+              <source srcset="images/slide-img-8.webp" type="image/webp">
+              <img src="images/slide-img-8.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide-img-9.avif" type="image/avif">
+              <source srcset="images/slide-img-9.webp" type="image/webp">
+              <img src="images/slide-img-9.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide.avif" type="image/avif">
+              <source srcset="images/slide.webp" type="image/webp">
+              <img src="images/slide.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide.avif" type="image/avif">
+              <source srcset="images/slide.webp" type="image/webp">
+              <img src="images/slide.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide.avif" type="image/avif">
+              <source srcset="images/slide.webp" type="image/webp">
+              <img src="images/slide.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+          <a class="reviews__slide swiper-slide" href="#">
+            <picture>
+              <source srcset="images/slide.avif" type="image/avif">
+              <source srcset="images/slide.webp" type="image/webp">
+              <img src="images/slide.jpg" alt="Photo of a sweater" width="169" height="169" loading="lazy">
+            </picture>
+          </a>
+        </div>
+        <div class="reviews__slider-nav">
+          <div class="reviews__arrow reviews__arrow-prev">
+            <svg width="25" height="16">
+              <use xlink:href="images/sprite.svg#arrow-slide-left"></use>
+            </svg>
+          </div>
+          <div class="reviews__arrow reviews__arrow-next">
+            <svg width="25" height="16">
+              <use xlink:href="images/sprite.svg#arrow-slide-right"></use>
+            </svg>
+          </div>
+          <div class="reviews__pagination"></div>
+        </div>
+      </div>
+      <div class="reviews-box">
+        <span class="reviews-box__number">4.9</span>
+        <ul class="reviews-box__list d-flex">
+          <li class="reviews-box__item">
+            <svg width="20" height="22">
+              <use xlink:href="images/sprite.svg#star-active"></use>
+            </svg>
+          </li>
+          <li class="reviews-box__item">
+            <svg width="20" height="22">
+              <use xlink:href="images/sprite.svg#star-active"></use>
+            </svg>
+          </li>
+          <li class="reviews-box__item">
+            <svg width="20" height="22">
+              <use xlink:href="images/sprite.svg#star-active"></use>
+            </svg>
+          </li>
+          <li class="reviews-box__item">
+            <svg width="20" height="22">
+              <use xlink:href="images/sprite.svg#star-active"></use>
+            </svg>
+          </li>
+          <li class="reviews-box__item">
+            <svg width="20" height="22">
+              <use xlink:href="images/sprite.svg#star-active"></use>
+            </svg>
+          </li>
+        </ul>
+        <a class="reviews-box__all" href="#">458 ratings</a>
+      </div>
+      <a class="reviews__slider-addreview" href="#">Add a review</a>
+    </div>
+
+  </section>
+
+</main>
+    <footer class="footer">
+      <div class="container">
+          <nav class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Catalog</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Collections</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">About</a>
+							</li>
+							<li class="footer__menu-item footer__menu-logo">
+								<a class="logo" href="#">
+									<img class="logo__img" src="images/logo-bg.svg" alt="logo">
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Book your appointment</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#" class="footer__menu-link">Contact</a>
+							</li>
+						</ul>
+          </nav>
+					<div class="footer__elements">
+						<div class="footer__element">
+							<span class="footer__element-title">Location</span>
+							<address class="footer__adress">
+								Ukraine, Kyiv, <br>
+								st. Voitenko, 67
+							</address> 
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Phones</span>
+							<ul class="footer__element-list">
+								<li class="footer__element-item">
+									<a href="tel:+380676765324" class="footer__element-link">+380 (67) 676 53 24</a>
+								</li>
+								<li class="footer__element-item">
+									<a href="tel:+380678846542" class="footer__element-link">+380 (67) 884 65 42</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Emails</span>
+							<ul class="footer__element-list">
+								<li class="footer__element-item">
+									<a href="mailto:office@boss.com" class="footer__element-link">office@boss.com</a>
+								</li>
+								<li class="footer__element-item">
+									<a href="mailto:sales@boss.com" class="footer__element-link">sales@boss.com</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__element">
+							<span class="footer__element-title">Sign-up for our newsletter</span>
+							<form class="footer__form" action="">
+								<label for="email__footer" aria-label="Enter email">
+								<input class="footer__form-input" id="email__footer" type="email" placeholder="Enter your email" required>
+								</label>
+								<button class="footer__form-btn" type="submit" aria-label="Send a letter">
+									<svg width="15" height="11">
+										<use xlink:href="images/sprite.svg#envelop"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+						<div class="footer__element footer__element--social">
+							<span class="footer__element-title">Social</span>
+							<ul class="footer__social-list">
+								<li class="footer__social-item">
+									<a class="footer__social-link" href="#">
+										<svg width="26" height="26">
+											<use xlink:href="images/sprite.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="footer__social-item">
+									<a class="footer__social-link" href="#">
+										<svg width="26" height="26">
+											<use xlink:href="images/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+      </div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="footer__bottom-inner">
+						<p class="footer__copy">©Boss. All rights reserved.</p>
+						<ul class="footer__bottom-list">
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Privacy Policy</a>
+							</li>
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Refund policy</a>
+							</li>
+							<li class="footer__bottom-item">
+								<a class="footer__bottom-link" href="#">Terms of Service</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+    </footer>
+</div>
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

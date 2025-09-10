@@ -1,13 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <button class="header__btn">
+        <svg width="30" height="19">
+          <use xlink:href="images/sprite.svg#mobile-btn"></use>
+        </svg>
+      </button>
+      <div class="header__logo">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
+      </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>start shop</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+      <nav class="menu">
+        <ul class="header__lang">
+          <li class="header__lang-item header__lang-item--active">
+            <a class="header__lang-link" href="#">EN</a>/
+          </li>
+          <li class="header__lang-item">
+            <a class="header__lang-link" href="#">UA</a>
+          </li>
+        </ul>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__item-link" href="catalog.html">CATALOG</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">ABOUT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="appointment.html">BOOK AN APPOINTMENT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link" href="#">
+              <svg width="24" height="21">
+                <use xlink:href="images/sprite.svg#wishlist"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a class="header__actions-link open-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#shopping-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal" aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <div class="modal__content" role="dialog" aria-modal="true">
+          <div class="checkout__details-items">
+            <div class="checkout__details-itemsline d-flex flex-between flex-aic">
+              <span class="checkout__details-quantity">2 items in bag</span>
+              <button class="checkout__details-del close-modal" aria-modal="close modal window">
+                <svg width="18" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="images/sprite.svg#checkout-del"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-1.avif" type="image/avif">
+                <source srcset="images/order-1.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-1.png" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">TROUSERS IN COTTON</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">M</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 249,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-2.avif" type="image/avif">
+                <source srcset="images/order-2.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-2.jpg" alt="order photos" width="139" height="182"
+                  loading="lazy">
+              </picture>
+              <div class="checkout__item-box">
+                <span class="checkout__item-title">LEATHER TRAINERS</span>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">SIZE:</dt>
+                    <dd class="checkout__item-definition">43</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">COLOR:</dt>
+                    <dd class="checkout__item-definition">WHITE</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition">€ 299,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del">
+                  <svg width="16" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order">
 
-<body>
+            <dl class="order__list">
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Subtotal:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Shipping:</dt>
+                <dd class="order__list-definition">FREE</dd>
+              </div>
+              <div class="order__list-box d-flex flex-between flex-aic">
+                <dt class="order__list-term">Total:</dt>
+                <dd class="order__list-definition">€ 548,00</dd>
+              </div>
+            </dl>
+            <div class="order__links">
+              <a class="order__link" href="#">KEEP SHOPPING</a>
+              <a class="order__link-now" href="#">BUY IT NOW</a>
+            </div>
 
- 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

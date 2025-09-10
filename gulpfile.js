@@ -11,8 +11,19 @@ const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 const newer = require('gulp-newer');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const sourcemaps = require('gulp-sourcemaps');
 const include = require('gulp-include');
 const svgstore = require('gulp-svgstore');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+
+gulp.task('scss', function () {
+  return gulp.src('app/scss/style.scss')
+    .pipe(sass({
+      includePaths: ['app/scss'] // ← теперь можно писать @use 'vars';
+    }).on('error', sass.logError))
+    .pipe(gulp.dest('app/css'));
+});
 
 function sprites() {
   return src('app/images/sprite/*.svg')
@@ -52,21 +63,28 @@ function images() {
     .pipe(dest('app/images'))
 }
 
-
 function styles() {
-  return src('app/scss/*.scss')
+  console.log('Запуск задачи styles'); // Добавьте эту строку
+  return src('app/scss/style.scss')
+  .pipe(sourcemaps.init())
+    .pipe(scss({
+      outputStyle: 'expanded',
+      includePaths: ['app/scss'] // теперь @use 'vars'; будет работать
+    }).on('error', scss.logError))
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 versions']
+      overrideBrowserslist: ['last 10 versions'],
+      cascade: false
     }))
     .pipe(concat('style.min.css'))
-    .pipe(scss({ style: 'compressed' }))
+    .pipe(sourcemaps.write('.')) // Добавьте эту строку
     .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
   return src([
     'node_modules/swiper/swiper-bundle.js',
+    'node_modules/nouislider/dist/nouislider.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -81,17 +99,24 @@ function watching() {
       baseDir: 'app/'
     }
   });
-  watch(['app/scss/*.scss'], styles)
-  watch(['app/images/src'], images)
+  watch(['app/scss/**/*.scss'], styles) // Следим за всеми SCSS-файлами в подпапках
+  // watch(['app/scss/*.scss'], styles)
+  // watch(['app/images/src//**/*'], images)
+  watch('app/images/src/**/*.{png,jpg,jpeg,webp,avif,gif,svg}', images);
   watch(['app/images/sprite'], sprites)
   watch(['app/pages/*', 'app/components/*'], pages)
   watch(['app/js/main.js'], scripts)
   watch(['app/*.html']).on('change', browserSync.reload)
 }
 
+// function cleanDist() {
+//   return src('dist')
+//   .pipe(clean())
+// }
+
 function cleanDist() {
-  return src('dist')
-  .pipe(clean())
+  return src('dist', { allowEmpty: true })
+    .pipe(clean({ force: true }))
 }
 
 function building() {
@@ -118,3 +143,4 @@ exports.building = building;
 
 exports.build = series(cleanDist, building);
 exports.default = parallel(styles, images, sprites, scripts, pages, watching);
+
