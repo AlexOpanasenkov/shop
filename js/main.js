@@ -4,28 +4,26 @@ const modalOverlay = document.querySelector('.modal__overlay');
 const closeBtn = document.querySelector('.close-modal');
 
 function openModal() {
-  modal.setAttribute('inert', 'false');
-  document.documentElement.classList.add('scroll-lock'); // <html>
+  modal.removeAttribute('inert');
+  document.documentElement.classList.add('scroll-lock');
   document.body.classList.add('scroll-lock');
 }
 
 function closeModal() {
-  modal.setAttribute('inert', 'true');
-  document.documentElement.classList.remove('scroll-lock'); // <html>
+  modal.setAttribute('inert', '');
+  document.documentElement.classList.remove('scroll-lock');
   document.body.classList.remove('scroll-lock');
 }
 
-modalOverlay.addEventListener('click', closeModal); // закрытие по клику вне окна
-
-openBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
+if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+if (openBtn) openBtn.addEventListener('click', openModal);
+if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape' && modal.getAttribute('inert') === 'false') {
-    closeModal()
+  if (e.key === 'Escape' && !modal.hasAttribute('inert')) {
+    closeModal();
   }
 });
-
 
 const openPopupBtn = document.querySelector('.catalog-popup');
 const popup = document.querySelector('.popup');
@@ -33,25 +31,24 @@ const popupOverlay = document.querySelector('.popup__overlay');
 const closePopupBtn = document.querySelector('.close-popup');
 
 function openPopup() {
-  popup.setAttribute('inert', 'false');
-  document.documentElement.classList.add('scroll-lock'); // <html>
+  popup.removeAttribute('inert');
+  document.documentElement.classList.add('scroll-lock');
   document.body.classList.add('scroll-lock');
 }
 
 function closePopup() {
-  popup.setAttribute('inert', 'true');
-  document.documentElement.classList.remove('scroll-lock'); // <html>
+  popup.setAttribute('inert', '');
+  document.documentElement.classList.remove('scroll-lock');
   document.body.classList.remove('scroll-lock');
-} 
+}
 
-popupOverlay.addEventListener('click', closePopup); // закрытие по клику вне окна
-
-openPopupBtn.addEventListener('click', openPopup);
-closePopupBtn.addEventListener('click', closePopup);
+if (popupOverlay) popupOverlay.addEventListener('click', closePopup);
+if (openPopupBtn) openPopupBtn.addEventListener('click', openPopup);
+if (closePopupBtn) closePopupBtn.addEventListener('click', closePopup);
 
 document.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape' && popup.getAttribute('inert') === 'false') {
-    closePopup()
+  if (e.key === 'Escape' && !popup.hasAttribute('inert')) {
+    closePopup();
   }
 });
 
