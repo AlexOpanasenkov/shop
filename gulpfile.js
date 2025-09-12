@@ -118,6 +118,7 @@ function cleanDist() {
 }
 
 function building() {
+  console.log('Building to dist...');
   return src([
     'app/**/*.html',
     'app/css/**/*.css',
