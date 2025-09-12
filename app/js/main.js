@@ -1,4 +1,10 @@
-function setupModal(openSelector, modalSelector, closeSelector, overlaySelector) {
+// Удаляем повторяющееся объявление функции
+function setupModal(
+  openSelector,
+  modalSelector,
+  closeSelector,
+  overlaySelector
+) {
   const openBtn = document.querySelector(openSelector);
   const modal = document.querySelector(modalSelector);
   const closeBtn = document.querySelector(closeSelector);
@@ -6,42 +12,48 @@ function setupModal(openSelector, modalSelector, closeSelector, overlaySelector)
 
   function open() {
     if (modal) {
-      modal.removeAttribute('inert');
-      document.body.classList.add('scroll-lock');
+      // Убираем атрибут inert и добавляем класс active
+      modal.removeAttribute("inert");
+      modal.classList.add("active");
+      document.body.classList.add("scroll-lock");
     }
   }
 
   function close() {
     if (modal) {
-      modal.setAttribute('inert', '');
-      document.body.classList.remove('scroll-lock');
+      // Добавляем атрибут inert и убираем класс active
+      modal.setAttribute("inert", "");
+      modal.classList.remove("active");
+      document.body.classList.remove("scroll-lock");
     }
   }
 
-  if (openBtn) openBtn.addEventListener('click', open);
-  if (closeBtn) closeBtn.addEventListener('click', close);
-  if (overlay) overlay.addEventListener('click', close);
+  if (openBtn) openBtn.addEventListener("click", open);
+  if (closeBtn) closeBtn.addEventListener("click", close);
+  if (overlay) overlay.addEventListener("click", close);
 
   return { open, close };
 }
 
 // Настройка модалки корзины
-setupModal('.open-modal', '.modal', '.close-modal', '.modal__overlay');
+setupModal(".open-modal", ".modal", ".close-modal", ".modal__overlay");
 
 // Настройка фильтра каталога
-setupModal('.catalog-popup', '.popup', '.close-popup', '.popup__overlay');
+setupModal(".catalog-popup", ".popup", ".close-popup", ".popup__overlay");
 
 // Закрытие по Escape
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    const modals = document.querySelectorAll('.modal, .popup');
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const modals = document.querySelectorAll(".modal, .popup");
     modals.forEach((m) => {
-      if (!m.hasAttribute('inert')) m.setAttribute('inert', '');
+      if (!m.hasAttribute("inert")) {
+        m.setAttribute("inert", "");
+        m.classList.remove("active");
+      }
     });
-    document.body.classList.remove('scroll-lock');
+    document.body.classList.remove("scroll-lock");
   }
 });
-
 
 const breakpoint = window.matchMedia("(max-width: 650px)");
 let sliderMobile = null;
@@ -76,36 +88,38 @@ handleBreakpointChange(breakpoint);
 breakpoint.addEventListener("change", handleBreakpointChange);
 
 document.addEventListener("DOMContentLoaded", () => {
-  const headerBtn = document.querySelector('.header__btn');
-  const menu = document.querySelector('.menu');
-  const bodyLock = document.querySelector('body');
+  const headerBtn = document.querySelector(".header__btn");
+  const menu = document.querySelector(".menu");
+  const bodyLock = document.querySelector("body");
 
   if (headerBtn && menu) {
-    headerBtn.addEventListener('click', () => {
-      menu.classList.toggle('menu--active');
-      bodyLock.classList.toggle('scroll-lock');
+    headerBtn.addEventListener("click", () => {
+      menu.classList.toggle("menu--active");
+      bodyLock.classList.toggle("scroll-lock");
     });
   } else {
-    console.error('Header button or menu not found');
+    console.error("Header button or menu not found");
   }
 
   const modeContainer = document.querySelector(".view-mode__container");
   const modeBtnGrid = document.querySelector(".view-mode__btn-grid");
   const modeBtnLine = document.querySelector(".view-mode__btn-line");
 
-  if (modeBtnGrid) modeBtnGrid.addEventListener("click", () => {
-    modeContainer.classList.add("view-mode__container--grid");
-    modeContainer.classList.remove("view-mode__container--list");
-    modeBtnGrid.classList.add("active");
-    modeBtnLine.classList.remove("active");
-  });
+  if (modeBtnGrid)
+    modeBtnGrid.addEventListener("click", () => {
+      modeContainer.classList.add("view-mode__container--grid");
+      modeContainer.classList.remove("view-mode__container--list");
+      modeBtnGrid.classList.add("active");
+      modeBtnLine.classList.remove("active");
+    });
 
-  if (modeBtnLine) modeBtnLine.addEventListener("click", () => {
-    modeContainer.classList.add("view-mode__container--list");
-    modeContainer.classList.remove("view-mode__container--grid");
-    modeBtnLine.classList.add("active");
-    modeBtnGrid.classList.remove("active");
-  });
+  if (modeBtnLine)
+    modeBtnLine.addEventListener("click", () => {
+      modeContainer.classList.add("view-mode__container--list");
+      modeContainer.classList.remove("view-mode__container--grid");
+      modeBtnLine.classList.add("active");
+      modeBtnGrid.classList.remove("active");
+    });
 });
 
 const swiper = new Swiper(".accessories__slider", {
@@ -133,7 +147,7 @@ const swiper = new Swiper(".accessories__slider", {
 });
 
 const swiperReviews = new Swiper(".reviews__slider", {
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   spaceBetween: 16,
   loop: true,
   navigation: {
