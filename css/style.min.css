@@ -4221,9 +4221,6 @@ body.scroll-lock {
   }
 }
 @media (min-width: 1024px) {
-  .header__btn {
-    display: none;
-  }
   .menu {
     position: static;
     inset: auto;
@@ -4464,40 +4461,31 @@ body.scroll-lock {
     align-items: center; /* выравнивание по вертикали у контейнера */
   }
   .header__btn {
-    display: inline-block;
-    position: relative;
-    z-index: 10;
+    display: none;
   }
   .menu {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
+    position: static;
+    inset: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    background: transparent;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 100px 0 100px;
-    text-align: center;
-    background-color: #fff;
-    z-index: 5;
-    -webkit-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    transform: translateY(-100%);
-    -webkit-transition: -webkit-transform 0.5s ease;
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    z-index: 500;
+  }
+  .menu__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 40px;
+    text-align: left;
   }
   .menu.menu--active {
     -webkit-transform: translateY(0);
@@ -4516,12 +4504,6 @@ body.scroll-lock {
     -webkit-transform: translateY(14px);
     -ms-transform: translateY(14px);
     transform: translateY(14px);
-  }
-  .menu__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
   .top {
     background-position: top;
