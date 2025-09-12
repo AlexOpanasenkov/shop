@@ -84,7 +84,7 @@
           </li>
         </ul>
       </div>
-      <div class="modal" aria-hidden="true">
+      <div class="modal" inert>
         <div class="modal__overlay"></div>
         <div class="modal__content" role="dialog" aria-modal="true">
           <div class="checkout__details-items">
@@ -242,7 +242,7 @@
         </div>
       </div>
       <div class="catalog__content d-flex">
-        <div class="popup" aria-hidden="true">
+        <div class="popup" inert>
           <div class="popup__overlay"></div>
           <div class="popup__content" role="dialog" aria-modal="true">
 
@@ -265,11 +265,13 @@
                     <div class="range">
                       <div class="range__inputs d-flex flex-aic">
                         <label class="range__label">
-                          <input class="range__min" type="number" name="range" value="300" min="300" max="3000">
+                          <input class="range__min" type="number" name="range" value="min" min="300" max="3000"
+                            step="100">
                         </label>
                         -
                         <label class="range__label">
-                          <input class="range__max" type="number" name="range" value="3000" min="300" max="3000">
+                          <input class="range__max" type="number" name="range" value="max" min="300" max="3000"
+                            step="100">
                         </label>
                       </div>
                       <div class="range__slider"></div>
