@@ -3845,17 +3845,24 @@ span {
 
 .modal,
 .popup {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  /* важно: позволяем прокрутку внутри модалки, если контент высокий */
+  overflow-y: auto;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: contain;
+  /* вместо идеального центрирования — старт сверху, так не будет «обрезки» */
   display: none;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: fixed;
-  inset: 0;
-  z-index: 100;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   background-color: rgba(79, 79, 79, 0.8);
+  /* зазор от краёв окна, чтобы контент не прилипал */
+  padding: 24px 12px;
 }
 .modal.active,
 .popup.active {
@@ -3924,6 +3931,16 @@ span {
   color: #fff;
   background-color: #161515;
   border: 1px solid #161515;
+}
+
+.modal__content,
+.popup__content {
+  position: relative;
+  width: min(600px, 100%);
+  max-height: calc(100vh - 48px); /* 48px = вертикальные паддинги .modal/.popup */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+  border-radius: 8px;
 }
 
 .close-modal,
@@ -4332,6 +4349,10 @@ body.scroll-lock {
     overflow: auto;
     background-color: #fff;
     z-index: 101;
+  }
+  .popup__content {
+    width: 270px;
+    max-height: calc(100vh - 60px);
   }
   .close-popup {
     display: block;
