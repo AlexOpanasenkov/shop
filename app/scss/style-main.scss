@@ -60,13 +60,34 @@
 }
 
 .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  background-color: vars.$bg-primary;
   display: flex;
-  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* скрываем меню за пределы экрана */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+
   &__list {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  &.menu--active {
+    transform: translateY(0); /* плавно выезжает вниз */
   }
 }
+
 
 .top {
   position: relative;
@@ -2234,7 +2255,7 @@ span {
   z-index: 100;
   background-color: rgba($color: vars.$color-text-main, $alpha: 0.8);
 
-  &[inert="false"] {
+  &.active {
     display: flex;
   }
 
@@ -2299,14 +2320,18 @@ span {
   }
 }
 
+.popup {
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+}
+
 .close-popup {
   display: none;
 }
 
-
-.menu--active { 
-  display: block; 
-} 
 
 body.scroll-lock { 
   overflow: hidden; 
