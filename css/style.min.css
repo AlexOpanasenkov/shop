@@ -3873,7 +3873,7 @@ span {
   display: block;
 }
 
-.scroll-lock {
+body.scroll-lock {
   overflow: hidden;
 }
 
