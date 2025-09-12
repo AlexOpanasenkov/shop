@@ -7,685 +7,680 @@
   <title>start shop</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
 </head>
 
 <body>
 
   <div class="wrapper">
-<div class="promo">
-  <div class="container">
-    <p class="promo-text">SAVE 10% OFF WHEN YOU <a href="#">SIGN UP</a></p>
-  </div>
-</div>
-<header class="header">
-  <div class="container">
-    <div class="header__inner">
-      <button class="header__btn">
-        <svg width="30" height="19">
-          <use xlink:href="images/sprite.svg#mobile-btn"></use>
-        </svg>
-      </button>
-      <div class="header__logo">
-        <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.svg" alt="logo">
-        </a>
-      </div>
-
-      <nav class="menu">
-        <ul class="header__lang">
-          <li class="header__lang-item header__lang-item--active">
-            <a class="header__lang-link" href="#">EN</a>/
-          </li>
-          <li class="header__lang-item">
-            <a class="header__lang-link" href="#">UA</a>
-          </li>
-        </ul>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__item-link" href="catalog.html">CATALOG</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item-link" href="#">ABOUT</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item-link" href="appointment.html">BOOK AN APPOINTMENT</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item-link" href="#">CONTACT</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__actions">
-        <ul class="header__actions-list">
-          <li class="header__actions-item">
-            <a class="header__actions-link" href="#">
-              <svg width="24" height="24">
-                <use xlink:href="images/sprite.svg#user"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="header__actions-item">
-            <a class="header__actions-link" href="#">
-              <svg width="24" height="21">
-                <use xlink:href="images/sprite.svg#wishlist"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="header__actions-item">
-            <a class="header__actions-link open-modal" href="#">
-              <svg width="24" height="24">
-                <use xlink:href="images/sprite.svg#shopping-bag"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="modal" aria-hidden="true">
-        <div class="modal__overlay"></div>
-        <div class="modal__content" role="dialog" aria-modal="true">
-          <div class="checkout__details-items">
-            <div class="checkout__details-itemsline d-flex flex-between flex-aic">
-              <span class="checkout__details-quantity">2 items in bag</span>
-              <button class="checkout__details-del close-modal" aria-modal="close modal window">
-                <svg width="18" height="18" aria-hidden="true" focusable="false">
-                  <use xlink:href="images/sprite.svg#checkout-del"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="checkout__item">
-              <picture>
-                <source srcset="images/order-1.avif" type="image/avif">
-                <source srcset="images/order-1.webp" type="image/webp">
-                <img class="checkout__item-img" src="images/order-1.png" alt="order photos" width="139" height="182"
-                  loading="lazy">
-              </picture>
-              <div class="checkout__item-box">
-                <span class="checkout__item-title">TROUSERS IN COTTON</span>
-                <dl class="checkout__item-list">
-                  <div class="checkout__item-listbox">
-                    <dt class="checkout__item-term">SIZE:</dt>
-                    <dd class="checkout__item-definition">M</dd>
-                  </div>
-                  <div class="checkout__item-listbox">
-                    <dt class="checkout__item-term">COLOR:</dt>
-                    <dd class="checkout__item-definition">WHITE</dd>
-                  </div>
-                  <div class="checkout__item-listbox">
-                    <dt class="checkout__item-term">Item subtotal:</dt>
-                    <dd class="checkout__item-definition">€ 249,00</dd>
-                  </div>
-                </dl>
-                <button class="checkout__item-del">
-                  <svg width="16" height="20" aria-hidden="true" focusable="false">
-                    <use xlink:href="images/sprite.svg#item-del"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="checkout__item">
-              <picture>
-                <source srcset="images/order-2.avif" type="image/avif">
-                <source srcset="images/order-2.webp" type="image/webp">
-                <img class="checkout__item-img" src="images/order-2.jpg" alt="order photos" width="139" height="182"
-                  loading="lazy">
-              </picture>
-              <div class="checkout__item-box">
-                <span class="checkout__item-title">LEATHER TRAINERS</span>
-                <dl class="checkout__item-list">
-                  <div class="checkout__item-listbox">
-                    <dt class="checkout__item-term">SIZE:</dt>
-                    <dd class="checkout__item-definition">43</dd>
-                  </div>
-                  <div class="checkout__item-listbox">
-                    <dt class="checkout__item-term">COLOR:</dt>
-                    <dd class="checkout__item-definition">WHITE</dd>
-                  </div>
-                  <div class="checkout__item-listbox">
-                    <dt class="checkout__item-term">Item subtotal:</dt>
-                    <dd class="checkout__item-definition">€ 299,00</dd>
-                  </div>
-                </dl>
-                <button class="checkout__item-del">
-                  <svg width="16" height="20" aria-hidden="true" focusable="false">
-                    <use xlink:href="images/sprite.svg#item-del"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="order">
-
-            <dl class="order__list">
-              <div class="order__list-box d-flex flex-between flex-aic">
-                <dt class="order__list-term">Subtotal:</dt>
-                <dd class="order__list-definition">€ 548,00</dd>
-              </div>
-              <div class="order__list-box d-flex flex-between flex-aic">
-                <dt class="order__list-term">Shipping:</dt>
-                <dd class="order__list-definition">FREE</dd>
-              </div>
-              <div class="order__list-box d-flex flex-between flex-aic">
-                <dt class="order__list-term">Total:</dt>
-                <dd class="order__list-definition">€ 548,00</dd>
-              </div>
-            </dl>
-            <div class="order__links">
-              <a class="order__link" href="#">KEEP SHOPPING</a>
-              <a class="order__link-now" href="#">BUY IT NOW</a>
-            </div>
-
-          </div>
-        </div>
+    <div class="promo">
+      <div class="container">
+        <p class="promo-text">SAVE 10% OFF WHEN YOU <a href="#">SIGN UP</a></p>
       </div>
     </div>
-  </div>
-</header>
-<main class="main">
-  <div class="breadcrumbs">
-    <div class="container">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">Home</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span class="breadcrumbs__link">Collection</span>
-        </li>
-        <li class="breadcrumbs__item">
-          <span class="breadcrumbs__link">trousers in cotton</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <section class="catalog">
-    <div class="container">
-      <div class="catalog__top d-flex flex-between flex-aic">
-        <div class="catalog__view-mode d-flex flex-aic">
-          View as
-          <ul class="view-mode d-flex flex-aic">
-            <li class="view-mode__item">
-              <button class="view-mode__btn view-mode__btn-grid" type="button" aria-label="Grid view" title="Grid view"
-                aria-pressed="true">
-                <svg width="20" height="20" aria-hidden="true" focusable="false">
-                  <use xlink:href="images/sprite.svg#catalog-grid"></use>
-                </svg>
-              </button>
-            </li>
-            <li class="view-mode__item">
-              <button class="view-mode__btn view-mode__btn-line" type="button" aria-label="Line view" title="Line view"
-                aria-pressed="false" width="20" height="20">
-                <svg width="20" height="20" aria-hidden="true" focusable="false">
-                  <use xlink:href="images/sprite.svg#catalog-line"></use>
-                </svg>
-              </button>
-            </li>
-          </ul>
-        </div>
-        <h1 class="catalog__title visually-hidden">David Beckham Collection</h1>
-        <button class="catalog-popup">Filter</button>
-        <h2 class="catalog__subtitle">
-          Beckham Collection
-        </h2>
-        <div class="catalog__sort catalog-sort">
-          <form class="catalog-sort__form" action="/catalog" method="GET" name="sortForm" id="sortForm">
-            <div class="catalog-sort__wrapper">
-              <select class="catalog-sort__select" name="sort" id="">
-                <option selected>Sort by popularity</option>
-                <option value="price">price</option>
-                <option value="price">price</option>
-              </select>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="catalog__content d-flex">
-        <div class="popup" aria-hidden="true">
-          <div class="popup__overlay"></div>
-          <div class="popup__content" role="dialog" aria-modal="true">
-
-
-            <aside class="catalog__filter">
-
-              <button class="checkout__details-del close-popup" aria-modal="close modal window">
-                <svg width="18" height="18" aria-hidden="true" focusable="false">
-                  <use xlink:href="images/sprite.svg#checkout-del"></use>
-                </svg>
-              </button>
-
-              <form class="catalog__filter-form" action="/catalog" method="GET" name="catalogFilter"
-                id="catalogFilterForm">
-                <div class="catalog__filterbox">
-                  <span class="catalog__filterbox-title">
-                    PRICE
-                  </span>
-                  <div class="catalog__filterbox-items--range">
-                    <div class="range">
-                      <div class="range__inputs d-flex flex-aic">
-                        <label class="range__label">
-                          <input class="range__min" type="number" name="range" value="min" min="300" max="3000"
-                            step="100">
-                        </label>
-                        -
-                        <label class="range__label">
-                          <input class="range__max" type="number" name="range" value="max" min="300" max="3000"
-                            step="100">
-                        </label>
-                      </div>
-                      <div class="range__slider"></div>
-                      <ul class="range__list">
-                        <li class="range__item">300</li>
-                        <li class="range__item">1,000</li>
-                        <li class="range__item">1,500</li>
-                        <li class="range__item">2,000</li>
-                        <li class="range__item">2,500</li>
-                        <li class="range__item">3,000</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="catalog__filterbox">
-                  <span class="catalog__filterbox-title">
-                    SIZE
-                  </span>
-                  <div class="catalog__filterbox-items">
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="xs">
-                      <span class="check-style"></span>
-                      XS
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="s">
-                      <span class="check-style"></span>
-                      S
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="m">
-                      <span class="check-style"></span>
-                      M
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="l">
-                      <span class="check-style"></span>
-                      L
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="xl">
-                      <span class="check-style"></span>
-                      XL
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="xxl">
-                      <span class="check-style"></span>
-                      XXL
-                    </label>
-                  </div>
-                </div>
-                <div class="catalog__filterbox">
-                  <span class="catalog__filterbox-title">
-                    COLOR
-                  </span>
-                  <div class="catalog__filterbox-items">
-                    <label class="radio-label">
-                      <input class="radio-box" type="radio" name="color" value="white">
-                      <span class="radio-style"></span>
-                      blue
-                    </label>
-                    <label class="radio-label">
-                      <input class="radio-box" type="radio" name="color" value="black">
-                      <span class="radio-style"></span>
-                      black
-                    </label>
-                  </div>
-                </div>
-                <div class="catalog__filterbox">
-                  <span class="catalog__filterbox-title">
-                    MATERIAL
-                  </span>
-                  <div class="catalog__filterbox-items">
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="cotton">
-                      <span class="check-style"></span>
-                      wool
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="cotton">
-                      <span class="check-style"></span>
-                      cotton
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="leather">
-                      <span class="check-style"></span>
-                      leather
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="jersey">
-                      <span class="check-style"></span>
-                      jersey
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="Linen">
-                      <span class="check-style"></span>
-                      Linen
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="Cashmere">
-                      <span class="check-style"></span>
-                      Cashmere
-                    </label>
-                  </div>
-                </div>
-                <div class="catalog__filterbox">
-                  <span class="catalog__filterbox-title">
-                    STYLE
-                  </span>
-                  <div class="catalog__filterbox-items catalog__filterbox-items--line">
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="ALL">
-                      <span class="check-style"></span>
-                      ALL
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="BOHO">
-                      <span class="check-style"></span>
-                      BOHO
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="ROMANTIC">
-                      <span class="check-style"></span>
-                      ROMANTIC
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="ELEGANT">
-                      <span class="check-style"></span>
-                      ELEGANT
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="VINTAGE">
-                      <span class="check-style"></span>
-                      VINTAGE
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="SIMPLE">
-                      <span class="check-style"></span>
-                      SIMPLE
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="MODERN">
-                      <span class="check-style"></span>
-                      MODERN
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="FORMAL">
-                      <span class="check-style"></span>
-                      FORMAL
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="GLAMOROUS">
-                      <span class="check-style"></span>
-                      GLAMOROUS
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="MODEST">
-                      <span class="check-style"></span>
-                      MODEST
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="CASUAL">
-                      <span class="check-style"></span>
-                      CASUAL
-                    </label>
-                    <label class="checkbox-label">
-                      <input class="check-box" type="checkbox" name="size" value="BEACH">
-                      <span class="check-style"></span>
-                      BEACH
-                    </label>
-                  </div>
-                </div>
-                <button class="catalog__filter-clean">clean all</button>
-              </form>
-            </aside>
-
-          </div>
-        </div>
-
-        <div class="catalog__content-box">
-          <div class="catalog__content-items view-mode__container view-mode__container--grid">
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-            <div class="catalog__content-item">
-              <picture>
-                <source srcset="images/catalog-1.avif" type="image/avif">
-                <source srcset="images/catalog-1.webp" type="image/webp">
-                <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
-                  height="400" loading="lazy">
-              </picture>
-              <span class="catalog__item-title">leather trainers</span>
-              <span class="catalog__item-price">€ 299,00</span>
-            </div>
-          </div>
-          <div class="pagination">
-            <a class="pagination__prev pagination__arrow pagination__arrow-disable" href="#">
-              <svg width="12" height="5">
-                <use xlink:href="images/sprite.svg#pagination-prev"></use>
-              </svg>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <button class="header__btn">
+            <svg width="30" height="19">
+              <use xlink:href="images/sprite.svg#mobile-btn"></use>
+            </svg>
+          </button>
+          <div class="header__logo">
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/logo.svg" alt="logo">
             </a>
-            <ul class="pagination__list"> 
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link-active">1</a>
+          </div>
+
+          <nav class="menu">
+            <ul class="header__lang">
+              <li class="header__lang-item header__lang-item--active">
+                <a class="header__lang-link" href="#">EN</a>/
               </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">2</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">3</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">4</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">5</a>
+              <li class="header__lang-item">
+                <a class="header__lang-link" href="#">UA</a>
               </li>
             </ul>
-            <a class="pagination__next pagination__arrow" href="#">
-              <svg width="12" height="5">
-                <use xlink:href="images/sprite.svg#pagination-next"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-    <footer class="footer">
-      <div class="container">
-          <nav class="footer__menu">
-						<ul class="footer__menu-list">
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">Catalog</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">Collections</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">About</a>
-							</li>
-							<li class="footer__menu-item footer__menu-logo">
-								<a class="logo" href="#">
-									<img class="logo__img" src="images/logo-bg.svg" alt="logo">
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">Book your appointment</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">Contact</a>
-							</li>
-						</ul>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__item-link" href="catalog.html">CATALOG</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="collections.html">COLLECTIONS</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">ABOUT</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="appointment.html">BOOK AN APPOINTMENT</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">CONTACT</a>
+              </li>
+            </ul>
           </nav>
-					<div class="footer__elements">
-						<div class="footer__element">
-							<span class="footer__element-title">Location</span>
-							<address class="footer__adress">
-								Ukraine, Kyiv, <br>
-								st. Voitenko, 67
-							</address> 
-						</div>
-						<div class="footer__element">
-							<span class="footer__element-title">Phones</span>
-							<ul class="footer__element-list">
-								<li class="footer__element-item">
-									<a href="tel:+380676765324" class="footer__element-link">+380 (67) 676 53 24</a>
-								</li>
-								<li class="footer__element-item">
-									<a href="tel:+380678846542" class="footer__element-link">+380 (67) 884 65 42</a>
-								</li>
-							</ul>
-						</div>
-						<div class="footer__element">
-							<span class="footer__element-title">Emails</span>
-							<ul class="footer__element-list">
-								<li class="footer__element-item">
-									<a href="mailto:office@boss.com" class="footer__element-link">office@boss.com</a>
-								</li>
-								<li class="footer__element-item">
-									<a href="mailto:sales@boss.com" class="footer__element-link">sales@boss.com</a>
-								</li>
-							</ul>
-						</div>
-						<div class="footer__element">
-							<span class="footer__element-title">Sign-up for our newsletter</span>
-							<form class="footer__form" action="">
-								<label for="email__footer" aria-label="Enter email">
-								<input class="footer__form-input" id="email__footer" type="email" placeholder="Enter your email" required>
-								</label>
-								<button class="footer__form-btn" type="submit" aria-label="Send a letter">
-									<svg width="15" height="11">
-										<use xlink:href="images/sprite.svg#envelop"></use>
-									</svg>
-								</button>
-							</form>
-						</div>
-						<div class="footer__element footer__element--social">
-							<span class="footer__element-title">Social</span>
-							<ul class="footer__social-list">
-								<li class="footer__social-item">
-									<a class="footer__social-link" href="#">
-										<svg width="26" height="26">
-											<use xlink:href="images/sprite.svg#facebook"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="footer__social-item">
-									<a class="footer__social-link" href="#">
-										<svg width="26" height="26">
-											<use xlink:href="images/sprite.svg#instagram"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-      </div>
-			<div class="footer__bottom">
-				<div class="container">
-					<div class="footer__bottom-inner">
-						<p class="footer__copy">©Boss. All rights reserved.</p>
-						<ul class="footer__bottom-list">
-							<li class="footer__bottom-item">
-								<a class="footer__bottom-link" href="#">Privacy Policy</a>
-							</li>
-							<li class="footer__bottom-item">
-								<a class="footer__bottom-link" href="#">Refund policy</a>
-							</li>
-							<li class="footer__bottom-item">
-								<a class="footer__bottom-link" href="#">Terms of Service</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+          <div class="header__actions">
+            <ul class="header__actions-list">
+              <li class="header__actions-item">
+                <a class="header__actions-link" href="#">
+                  <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#user"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header__actions-item">
+                <a class="header__actions-link" href="#">
+                  <svg width="24" height="21">
+                    <use xlink:href="images/sprite.svg#wishlist"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header__actions-item">
+                <a class="header__actions-link open-modal" href="#">
+                  <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#shopping-bag"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="modal" inert>
+            <div class="modal__overlay"></div>
+            <div class="modal__content" role="dialog" aria-modal="true">
+              <div class="checkout__details-items">
+                <div class="checkout__details-itemsline d-flex flex-between flex-aic">
+                  <span class="checkout__details-quantity">2 items in bag</span>
+                  <button class="checkout__details-del close-modal" aria-label="close modal window">
+                    <svg width="18" height="18" aria-hidden="true" focusable="false">
+                      <use xlink:href="images/sprite.svg#checkout-del"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="checkout__item">
+                  <picture>
+                    <source srcset="images/order-1.avif" type="image/avif">
+                    <source srcset="images/order-1.webp" type="image/webp">
+                    <img class="checkout__item-img" src="images/order-1.png" alt="order photos" width="139" height="182"
+                      loading="lazy">
+                  </picture>
+                  <div class="checkout__item-box">
+                    <span class="checkout__item-title">TROUSERS IN COTTON</span>
+                    <dl class="checkout__item-list">
+                      <div class="checkout__item-listbox">
+                        <dt class="checkout__item-term">SIZE:</dt>
+                        <dd class="checkout__item-definition">M</dd>
+                      </div>
+                      <div class="checkout__item-listbox">
+                        <dt class="checkout__item-term">COLOR:</dt>
+                        <dd class="checkout__item-definition">WHITE</dd>
+                      </div>
+                      <div class="checkout__item-listbox">
+                        <dt class="checkout__item-term">Item subtotal:</dt>
+                        <dd class="checkout__item-definition">€ 249,00</dd>
+                      </div>
+                    </dl>
+                    <button class="checkout__item-del">
+                      <svg width="16" height="20" aria-hidden="true" focusable="false">
+                        <use xlink:href="images/sprite.svg#item-del"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="checkout__item">
+                  <picture>
+                    <source srcset="images/order-2.avif" type="image/avif">
+                    <source srcset="images/order-2.webp" type="image/webp">
+                    <img class="checkout__item-img" src="images/order-2.jpg" alt="order photos" width="139" height="182"
+                      loading="lazy">
+                  </picture>
+                  <div class="checkout__item-box">
+                    <span class="checkout__item-title">LEATHER TRAINERS</span>
+                    <dl class="checkout__item-list">
+                      <div class="checkout__item-listbox">
+                        <dt class="checkout__item-term">SIZE:</dt>
+                        <dd class="checkout__item-definition">43</dd>
+                      </div>
+                      <div class="checkout__item-listbox">
+                        <dt class="checkout__item-term">COLOR:</dt>
+                        <dd class="checkout__item-definition">WHITE</dd>
+                      </div>
+                      <div class="checkout__item-listbox">
+                        <dt class="checkout__item-term">Item subtotal:</dt>
+                        <dd class="checkout__item-definition">€ 299,00</dd>
+                      </div>
+                    </dl>
+                    <button class="checkout__item-del">
+                      <svg width="16" height="20" aria-hidden="true" focusable="false">
+                        <use xlink:href="images/sprite.svg#item-del"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="order">
+
+                <dl class="order__list">
+                  <div class="order__list-box d-flex flex-between flex-aic">
+                    <dt class="order__list-term">Subtotal:</dt>
+                    <dd class="order__list-definition">€ 548,00</dd>
+                  </div>
+                  <div class="order__list-box d-flex flex-between flex-aic">
+                    <dt class="order__list-term">Shipping:</dt>
+                    <dd class="order__list-definition">FREE</dd>
+                  </div>
+                  <div class="order__list-box d-flex flex-between flex-aic">
+                    <dt class="order__list-term">Total:</dt>
+                    <dd class="order__list-definition">€ 548,00</dd>
+                  </div>
+                </dl>
+                <div class="order__links">
+                  <a class="order__link" href="#">KEEP SHOPPING</a>
+                  <a class="order__link-now" href="#">BUY IT NOW</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="breadcrumbs">
+            <div class="container">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="index.html">Home</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__link">Collection</span>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__link">trousers in cotton</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <section class="catalog">
+            <div class="container">
+              <div class="catalog__top d-flex flex-between flex-aic">
+                <div class="catalog__view-mode d-flex flex-aic">
+                  View as
+                  <ul class="view-mode d-flex flex-aic">
+                    <li class="view-mode__item">
+                      <button class="view-mode__btn view-mode__btn-grid" type="button" aria-label="Grid view" title="Grid view"
+                        aria-pressed="true">
+                        <svg width="20" height="20" aria-hidden="true" focusable="false">
+                          <use xlink:href="images/sprite.svg#catalog-grid"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="view-mode__item">
+                      <button class="view-mode__btn view-mode__btn-line" type="button" aria-label="Line view" title="Line view"
+                        aria-pressed="false" width="20" height="20">
+                        <svg width="20" height="20" aria-hidden="true" focusable="false">
+                          <use xlink:href="images/sprite.svg#catalog-line"></use>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <h1 class="catalog__title visually-hidden">David Beckham Collection</h1>
+                <button class="catalog-popup">Filter</button>
+                <h2 class="catalog__subtitle">
+                  Beckham Collection
+                </h2>
+                <div class="catalog__sort catalog-sort">
+                  <form class="catalog-sort__form" action="/catalog" method="GET" name="sortForm" id="sortForm">
+                    <div class="catalog-sort__wrapper">
+                      <select class="catalog-sort__select" name="sort" id="">
+                        <option selected>Sort by popularity</option>
+                        <option value="price">price</option>
+                        <option value="price">price</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="catalog__content d-flex">
+                <div class="popup" inert>
+                  <div class="modal__overlay"></div>
+                  <div class="popup__content" role="dialog" aria-modal="true">
+
+
+                    <aside class="catalog__filter">
+
+                      <button class="checkout__details-del close-popup" aria-label="close modal window">
+                        <svg width="18" height="18" aria-hidden="true" focusable="false">
+                          <use xlink:href="images/sprite.svg#checkout-del"></use>
+                        </svg>
+                      </button>
+
+                      <form class="catalog__filter-form" action="/catalog" method="GET" name="catalogFilter"
+                        id="catalogFilterForm">
+                        <div class="catalog__filterbox">
+                          <span class="catalog__filterbox-title">
+                            PRICE
+                          </span>
+                          <div class="catalog__filterbox-items--range">
+                            <div class="range">
+                              <div class="range__inputs d-flex flex-aic">
+                                <label class="range__label">
+                                  <input class="range__min" type="number" name="range" value="min" min="300" max="3000"
+                                    step="100">
+                                </label>
+                                -
+                                <label class="range__label">
+                                  <input class="range__max" type="number" name="range" value="max" min="300" max="3000"
+                                    step="100">
+                                </label>
+                              </div>
+                              <div class="range__slider"></div>
+                              <ul class="range__list">
+                                <li class="range__item">300</li>
+                                <li class="range__item">1,000</li>
+                                <li class="range__item">1,500</li>
+                                <li class="range__item">2,000</li>
+                                <li class="range__item">2,500</li>
+                                <li class="range__item">3,000</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog__filterbox">
+                          <span class="catalog__filterbox-title">
+                            SIZE
+                          </span>
+                          <div class="catalog__filterbox-items">
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="xs">
+                              <span class="check-style"></span>
+                              XS
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="s">
+                              <span class="check-style"></span>
+                              S
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="m">
+                              <span class="check-style"></span>
+                              M
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="l">
+                              <span class="check-style"></span>
+                              L
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="xl">
+                              <span class="check-style"></span>
+                              XL
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="xxl">
+                              <span class="check-style"></span>
+                              XXL
+                            </label>
+                          </div>
+                        </div>
+                        <div class="catalog__filterbox">
+                          <span class="catalog__filterbox-title">
+                            COLOR
+                          </span>
+                          <div class="catalog__filterbox-items">
+                            <label class="radio-label">
+                              <input class="radio-box" type="radio" name="color" value="white">
+                              <span class="radio-style"></span>
+                              blue
+                            </label>
+                            <label class="radio-label">
+                              <input class="radio-box" type="radio" name="color" value="black">
+                              <span class="radio-style"></span>
+                              black
+                            </label>
+                          </div>
+                        </div>
+                        <div class="catalog__filterbox">
+                          <span class="catalog__filterbox-title">
+                            MATERIAL
+                          </span>
+                          <div class="catalog__filterbox-items">
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="cotton">
+                              <span class="check-style"></span>
+                              wool
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="cotton">
+                              <span class="check-style"></span>
+                              cotton
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="leather">
+                              <span class="check-style"></span>
+                              leather
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="jersey">
+                              <span class="check-style"></span>
+                              jersey
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="Linen">
+                              <span class="check-style"></span>
+                              Linen
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="Cashmere">
+                              <span class="check-style"></span>
+                              Cashmere
+                            </label>
+                          </div>
+                        </div>
+                        <div class="catalog__filterbox">
+                          <span class="catalog__filterbox-title">
+                            STYLE
+                          </span>
+                          <div class="catalog__filterbox-items catalog__filterbox-items--line">
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="ALL">
+                              <span class="check-style"></span>
+                              ALL
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="BOHO">
+                              <span class="check-style"></span>
+                              BOHO
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="ROMANTIC">
+                              <span class="check-style"></span>
+                              ROMANTIC
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="ELEGANT">
+                              <span class="check-style"></span>
+                              ELEGANT
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="VINTAGE">
+                              <span class="check-style"></span>
+                              VINTAGE
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="SIMPLE">
+                              <span class="check-style"></span>
+                              SIMPLE
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="MODERN">
+                              <span class="check-style"></span>
+                              MODERN
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="FORMAL">
+                              <span class="check-style"></span>
+                              FORMAL
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="GLAMOROUS">
+                              <span class="check-style"></span>
+                              GLAMOROUS
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="MODEST">
+                              <span class="check-style"></span>
+                              MODEST
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="CASUAL">
+                              <span class="check-style"></span>
+                              CASUAL
+                            </label>
+                            <label class="checkbox-label">
+                              <input class="check-box" type="checkbox" name="size" value="BEACH">
+                              <span class="check-style"></span>
+                              BEACH
+                            </label>
+                          </div>
+                        </div>
+                        <button class="catalog__filter-clean">clean all</button>
+                      </form>
+                    </aside>
+
+                  </div>
+                </div>
+
+                <div class="catalog__content-box">
+                  <div class="catalog__content-items view-mode__container view-mode__container--grid">
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                    <div class="catalog__content-item">
+                      <picture>
+                        <source srcset="images/catalog-1.avif" type="image/avif">
+                        <source srcset="images/catalog-1.webp" type="image/webp">
+                        <img src="images/catalog-1.jpg" alt="foto dress from block catalog__content-items" width="270"
+                          height="400" loading="lazy">
+                      </picture>
+                      <span class="catalog__item-title">leather trainers</span>
+                      <span class="catalog__item-price">€ 299,00</span>
+                    </div>
+                  </div>
+                  <div class="pagination">
+                    <a class="pagination__prev pagination__arrow pagination__arrow-disable" href="#">
+                      <svg width="12" height="5">
+                        <use xlink:href="images/sprite.svg#pagination-prev"></use>
+                      </svg>
+                    </a>
+                    <ul class="pagination__list"> 
+                      <li class="pagination__item">
+                        <a class="pagination__link pagination__link-active">1</a>
+                      </li>
+                      <li class="pagination__item">
+                        <a class="pagination__link" href="#">2</a>
+                      </li>
+                      <li class="pagination__item">
+                        <a class="pagination__link" href="#">3</a>
+                      </li>
+                      <li class="pagination__item">
+                        <a class="pagination__link" href="#">4</a>
+                      </li>
+                      <li class="pagination__item">
+                        <a class="pagination__link" href="#">5</a>
+                      </li>
+                    </ul>
+                    <a class="pagination__next pagination__arrow" href="#">
+                      <svg width="12" height="5">
+                        <use xlink:href="images/sprite.svg#pagination-next"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+          <div class="container">
+              <nav class="footer__menu">
+  						<ul class="footer__menu-list">
+  							<li class="footer__menu-item">
+  								<a href="#" class="footer__menu-link">Catalog</a>
+  							</li>
+  							<li class="footer__menu-item">
+  								<a href="#" class="footer__menu-link">Collections</a>
+  							</li>
+  							<li class="footer__menu-item">
+  								<a href="#" class="footer__menu-link">About</a>
+  							</li>
+  							<li class="footer__menu-item footer__menu-logo">
+  								<a class="logo" href="#">
+  									<img class="logo__img" src="images/logo-bg.svg" alt="logo">
+  								</a>
+  							</li>
+  							<li class="footer__menu-item">
+  								<a href="#" class="footer__menu-link">Book your appointment</a>
+  							</li>
+  							<li class="footer__menu-item">
+  								<a href="#" class="footer__menu-link">Contact</a>
+  							</li>
+  						</ul>
+              </nav>
+  					<div class="footer__elements">
+  						<div class="footer__element">
+  							<span class="footer__element-title">Location</span>
+  							<address class="footer__adress">
+  								Ukraine, Kyiv, <br>
+  								st. Voitenko, 67
+  							</address> 
+  						</div>
+  						<div class="footer__element">
+  							<span class="footer__element-title">Phones</span>
+  							<ul class="footer__element-list">
+  								<li class="footer__element-item">
+  									<a href="tel:+380676765324" class="footer__element-link">+380 (67) 676 53 24</a>
+  								</li>
+  								<li class="footer__element-item">
+  									<a href="tel:+380678846542" class="footer__element-link">+380 (67) 884 65 42</a>
+  								</li>
+  							</ul>
+  						</div>
+  						<div class="footer__element">
+  							<span class="footer__element-title">Emails</span>
+  							<ul class="footer__element-list">
+  								<li class="footer__element-item">
+  									<a href="mailto:office@boss.com" class="footer__element-link">office@boss.com</a>
+  								</li>
+  								<li class="footer__element-item">
+  									<a href="mailto:sales@boss.com" class="footer__element-link">sales@boss.com</a>
+  								</li>
+  							</ul>
+  						</div>
+  						<div class="footer__element">
+  							<span class="footer__element-title">Sign-up for our newsletter</span>
+  							<form class="footer__form" action="">
+  								<label for="email__footer" aria-label="Enter email">
+  								<input class="footer__form-input" id="email__footer" type="email" placeholder="Enter your email" required>
+  								</label>
+  								<button class="footer__form-btn" type="submit" aria-label="Send a letter">
+  									<svg width="15" height="11">
+  										<use xlink:href="images/sprite.svg#envelop"></use>
+  									</svg>
+  								</button>
+  							</form>
+  						</div>
+  						<div class="footer__element footer__element--social">
+  							<span class="footer__element-title">Social</span>
+  							<ul class="footer__social-list">
+  								<li class="footer__social-item">
+  									<a class="footer__social-link" href="#">
+  										<svg width="26" height="26">
+  											<use xlink:href="images/sprite.svg#facebook"></use>
+  										</svg>
+  									</a>
+  								</li>
+  								<li class="footer__social-item">
+  									<a class="footer__social-link" href="#">
+  										<svg width="26" height="26">
+  											<use xlink:href="images/sprite.svg#instagram"></use>
+  										</svg>
+  									</a>
+  								</li>
+  							</ul>
+  						</div>
+  					</div>
+          </div>
+  			<div class="footer__bottom">
+  				<div class="container">
+  					<div class="footer__bottom-inner">
+  						<p class="footer__copy">©Boss. All rights reserved.</p>
+  						<ul class="footer__bottom-list">
+  							<li class="footer__bottom-item">
+  								<a class="footer__bottom-link" href="#">Privacy Policy</a>
+  							</li>
+  							<li class="footer__bottom-item">
+  								<a class="footer__bottom-link" href="#">Refund policy</a>
+  							</li>
+  							<li class="footer__bottom-item">
+  								<a class="footer__bottom-link" href="#">Terms of Service</a>
+  							</li>
+  						</ul>
+  					</div>
+  				</div>
+  			</div>
     </footer>
 </div>
 
