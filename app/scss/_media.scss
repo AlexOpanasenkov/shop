@@ -398,38 +398,8 @@
     width: 100%;
   }
 
-  .popup {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    inset: 0;
-    background-color: rgba(#161515, 0.8);
-
-  &[inert="false"] {
-    display: flex;
-  }
-
-  &__overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    
-  }
-
-  &__content {
-    position: relative;
-    width: 270px;
-    top: 30px;
-    left: 55px;
-    height: 90vh;
-    overflow: auto;
-    background-color: #fff;
-    z-index: 101;
-  }
-}
-
 .popup__content {
-   width: 270px;
+  width: 310px;
   max-height: calc(100vh - 60px);
 }
 
@@ -753,10 +723,6 @@
 
   .page-404__link {
     font-size: 24px;
-  }
-
-  .page-404__content {
-    margin-top: 136px;
   }
 
   .page-404__content {
