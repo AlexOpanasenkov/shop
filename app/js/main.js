@@ -1,55 +1,47 @@
-const openBtn = document.querySelector('.open-modal');
-const modal = document.querySelector('.modal');
-const modalOverlay = document.querySelector('.modal__overlay');
-const closeBtn = document.querySelector('.close-modal');
+function setupModal(openSelector, modalSelector, closeSelector, overlaySelector) {
+  const openBtn = document.querySelector(openSelector);
+  const modal = document.querySelector(modalSelector);
+  const closeBtn = document.querySelector(closeSelector);
+  const overlay = document.querySelector(overlaySelector);
 
-function openModal() {
-  if (modal) {
-    modal.removeAttribute('inert');
-    document.body.classList.add('scroll-lock');
+  function open() {
+    if (modal) {
+      modal.removeAttribute('inert');
+      document.body.classList.add('scroll-lock');
+    }
   }
+
+  function close() {
+    if (modal) {
+      modal.setAttribute('inert', '');
+      document.body.classList.remove('scroll-lock');
+    }
+  }
+
+  if (openBtn) openBtn.addEventListener('click', open);
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  if (overlay) overlay.addEventListener('click', close);
+
+  return { open, close };
 }
 
-function closeModal() {
-  if (modal) {
-    modal.setAttribute('inert', '');
-    document.body.classList.remove('scroll-lock');
-  }
-}
+// Настройка модалки корзины
+setupModal('.open-modal', '.modal', '.close-modal', '.modal__overlay');
 
-if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
-if (openBtn) openBtn.addEventListener('click', openModal);
-if (closeBtn) closeBtn.addEventListener('click', closeModal);
+// Настройка фильтра каталога
+setupModal('.catalog-popup', '.popup', '.close-popup', '.popup__overlay');
 
-const openPopupBtn = document.querySelector('.catalog-popup');
-const popup = document.querySelector('.popup');
-const popupOverlay = document.querySelector('.popup__overlay');
-const closePopupBtn = document.querySelector('.close-popup');
-
-function openPopup() {
-  if (popup) {
-    popup.removeAttribute('inert');
-    document.body.classList.add('scroll-lock');
-  }
-}
-
-function closePopup() {
-  if (popup) {
-    popup.setAttribute('inert', '');
-    document.body.classList.remove('scroll-lock');
-  }
-}
-
-if (popupOverlay) popupOverlay.addEventListener('click', closePopup);
-if (openPopupBtn) openPopupBtn.addEventListener('click', openPopup);
-if (closePopupBtn) closePopupBtn.addEventListener('click', closePopup);
-
+// Закрытие по Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    if (modal && !modal.hasAttribute('inert')) closeModal();
-    if (popup && !popup.hasAttribute('inert')) closePopup();
+    const modals = document.querySelectorAll('.modal, .popup');
+    modals.forEach((m) => {
+      if (!m.hasAttribute('inert')) m.setAttribute('inert', '');
+    });
+    document.body.classList.remove('scroll-lock');
   }
 });
+
 
 const breakpoint = window.matchMedia("(max-width: 650px)");
 let sliderMobile = null;
