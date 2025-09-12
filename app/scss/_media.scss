@@ -255,6 +255,23 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .menu {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .menu__list {
+    flex-direction: row;
+    gap: 40px;
+    text-align: left;
+  }
+}
+
 @media (max-width: 1000px) {
   .header__lang {
     margin-right: 60px;
@@ -843,6 +860,17 @@
     // grid-row: 3;
     width: auto;
     // justify-self: end;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    flex-wrap: wrap;
+  }
+
+  .header__logo {
+    width: 100%;
+    margin-bottom: 32px;
   }
 }
 
