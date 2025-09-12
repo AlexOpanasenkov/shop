@@ -3829,7 +3829,8 @@ span {
   left: -21px;
 }
 
-.modal {
+.modal,
+.popup {
   display: none;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -3842,53 +3843,64 @@ span {
   z-index: 100;
   background-color: rgba(79, 79, 79, 0.8);
 }
-.modal.active {
+.modal.active,
+.popup.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.modal__overlay {
+.modal__overlay,
+.popup__overlay {
   position: fixed;
   inset: 0;
   z-index: 100;
 }
-.modal__content {
-  max-width: 616px;
+.modal__content,
+.popup__content {
+  max-width: 600px;
   width: 100%;
-  height: 90vh;
-  overflow: auto;
-  background-color: #fff;
-  position: relative;
+  background: #fff;
+  padding: 20px;
   z-index: 101;
+  border-radius: 8px;
+  position: relative;
 }
-.modal .checkout__details-items {
+.modal .checkout__details-items,
+.popup .checkout__details-items {
   margin-bottom: 0;
 }
-.modal .order {
+.modal .order,
+.popup .order {
   padding: 40px 10px 74px;
   border: none;
 }
-.modal .order__list {
+.modal .order__list,
+.popup .order__list {
   margin-top: 0;
   margin-bottom: 40px;
 }
-.modal .order__list-box {
+.modal .order__list-box,
+.popup .order__list-box {
   font-size: 16px;
   margin-bottom: 10px;
 }
-.modal .order__list-box:last-child {
+.modal .order__list-box:last-child,
+.popup .order__list-box:last-child {
   margin-top: 0;
 }
-.modal .order__links {
+.modal .order__links,
+.popup .order__links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.modal .order__link {
+.modal .order__link,
+.popup .order__link {
   padding: 13px;
   font-size: 20px;
   background-color: #fff;
 }
-.modal .order__link-now {
+.modal .order__link-now,
+.popup .order__link-now {
   padding: 13px;
   text-align: center;
   -webkit-box-align: center;
@@ -3900,16 +3912,15 @@ span {
   border: 1px solid #161515;
 }
 
-.popup {
-  display: none;
-}
-.popup.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+.close-modal,
 .close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
   display: none;
 }
 
