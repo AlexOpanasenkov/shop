@@ -428,6 +428,11 @@
   }
 }
 
+.popup__content {
+   width: 270px;
+  max-height: calc(100vh - 60px);
+}
+
 .close-popup {
   display: block;
   position: absolute;

@@ -2252,13 +2252,22 @@ span {
 
 .modal,
 .popup {
-  display: none;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   inset: 0;
   z-index: 100;
+  
+  /* важно: позволяем прокрутку внутри модалки, если контент высокий */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  /* вместо идеального центрирования — старт сверху, так не будет «обрезки» */
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
   background-color: rgba($color: vars.$color-text-main, $alpha: 0.8);
+
+  /* зазор от краёв окна, чтобы контент не прилипал */
+  padding: 24px 12px;
 
   &.active {
     display: flex;
@@ -2323,6 +2332,16 @@ span {
     background-color: vars.$color-accent;
     border: 1px solid vars.$color-accent;
   }
+}
+
+.modal__content,
+.popup__content {
+  position: relative;
+  width: min(600px, 100%); 
+  max-height: calc(100vh - 48px); /* 48px = вертикальные паддинги .modal/.popup */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+  border-radius: 8px;
 }
 
 .close-modal,
