@@ -419,7 +419,7 @@
 
   .header__lang {
     margin-right: 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .menu {
@@ -445,6 +445,11 @@
 
   .menu__list {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .catalog__subtitle {
+    text-align: center;
   }
 }
 

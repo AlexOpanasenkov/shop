@@ -39,7 +39,7 @@
   &__lang {
     display: flex;
     margin-right: 215px;
-    
+
     &-item--active {
       @extend %opensans-800;
     }
@@ -48,13 +48,13 @@
   &__actions {
     display: flex;
     gap: 20px;
-    align-items:center;
+    align-items: center;
   }
 }
 
 .menu {
   display: flex;
-    
+
   &__list {
     display: flex;
     gap: 30px;
@@ -63,7 +63,7 @@
 
 .header__btn {
   display: none;
-} // бургер прячем на десктопе
+} 
 
 .top {
   position: relative;
@@ -664,6 +664,7 @@
   font-size: 16px;
   @extend %opensans-400;
   gap: 2px;
+  margin-bottom: 50px;
 
   &__list {
     display: flex;
@@ -713,7 +714,7 @@
     grid-template-columns: 2fr 1.1fr;
   }
 
-  &__images { 
+  &__images {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
@@ -1366,9 +1367,7 @@ span {
     color: rgba($color: vars.$color-accent, $alpha: 0.4);
     border-bottom: 1px solid vars.$color-accent;
   }
-}
 
-.reviews {
   &__slide {
     width: 169px;
     height: 169px;
@@ -2230,7 +2229,7 @@ span {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  
+
   /* важно: позволяем прокрутку внутри модалки, если контент высокий */
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -2312,8 +2311,10 @@ span {
 .modal__content,
 .popup__content {
   position: relative;
-  width: min(600px, 100%); 
-  max-height: calc(100vh - 48px); /* 48px = вертикальные паддинги .modal/.popup */
+  width: min(600px, 100%);
+  max-height: calc(
+    100vh - 48px
+  ); /* 48px = вертикальные паддинги .modal/.popup */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
   border-radius: 8px;
