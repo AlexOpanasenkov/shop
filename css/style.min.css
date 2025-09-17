@@ -2284,6 +2284,7 @@ button {
   align-items: center;
   font-size: 16px;
   gap: 2px;
+  margin-bottom: 50px;
 }
 .pagination__list {
   display: -webkit-box;
@@ -2966,7 +2967,6 @@ span {
   color: rgba(22, 21, 21, 0.4);
   border-bottom: 1px solid #161515;
 }
-
 .reviews__slide {
   width: 169px;
   height: 169px;
@@ -4282,7 +4282,7 @@ body.scroll-lock {
   }
   .header__lang {
     margin-right: 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .menu {
     display: -webkit-box;
@@ -4324,6 +4324,10 @@ body.scroll-lock {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    text-align: center;
+  }
+  .catalog__subtitle {
+    text-align: center;
   }
 }
 @media (max-width: 990px) {
